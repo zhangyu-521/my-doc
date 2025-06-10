@@ -3,10 +3,12 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/my-doc/',
-  title: "mydoc",
-  description: "学习笔记",
+  title: "zyDocs",
+  description: "该学习了，少年",
+  head: [['link', { rel: 'icon', href: '/my-doc/zy.ico' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/zy.png',
     nav: [
       { text: '前端基础', link: '/packages/js-doc/html5andcss3' },
       { text: 'Examples', link: '/packages/pa' }
@@ -19,6 +21,14 @@ export default defineConfig({
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' },
+          {text: 'Blob', link: '/packages/js-doc/blob.md' },
+        ]
+      },
+      {
+        text: 'CICD',
+        collapsed: true,
+        items: [
+          { text: 'GitHub Actions', link: '/packages/CICD/github-actions.md' },
         ]
       },
       {
