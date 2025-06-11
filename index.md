@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /packages/js-doc/Blob
+      link: /packages/js-doc/blob
     # - theme: alt
     #   text: API Examples
     #   link: /api-examples
