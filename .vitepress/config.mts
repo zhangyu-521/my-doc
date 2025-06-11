@@ -11,7 +11,6 @@ export default defineConfig({
     logo: '/zy.png',
     nav: [
       { text: '前端基础', link: '/packages/js-doc/html5andcss3' },
-      { text: 'Examples', link: '/packages/pa' }
     ],
 
     sidebar: [
@@ -19,16 +18,16 @@ export default defineConfig({
         text: 'js杂谈',
         collapsed: true,
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-          {text: 'Blob', link: '/packages/js-doc/blob.md' },
+          { text: 'Blob', link: '/packages/js-doc/blob.md' },
         ]
       },
       {
-        text: 'CICD',
+        text: '前端工程化',
         collapsed: true,
         items: [
-          { text: 'GitHub Actions', link: '/packages/CICD/github-actions.md' },
+          { text: 'npm', link: '/packages/engineer/npm.md' },
+          { text: '将静态网站部署到Github Pages', link: '/packages/CICD/github-actions.md' },
+
         ]
       },
       {
@@ -47,6 +46,49 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
+    ],
+
+    lastUpdated: {
+      text: '最后更新',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'short'
+      }
+    },
+
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+
+        //中文配置
+    langMenuLabel: "多语言", 
+    returnToTopLabel: "回到顶部",
+    sidebarMenuLabel: "菜单",
+    darkModeSwitchLabel: "主题",
+    lightModeSwitchTitle: "切换到浅色模式",
+    darkModeSwitchTitle: "切换到深色模式",
+    outlineTitle: "目录",
+
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2024-present zhangyu'
+    }
+  },
+
+  markdown: {
+    //显示行数
+    lineNumbers: true,
+    //中文配置
+    container:{
+      tipLabel: "提示",
+      warningLabel: "警告",
+      noteLabel: "注意",
+      dangerLabel: "危险",
+      detailsLabel: "详情",
+      infoLabel: "信息",
+    }
+   
+  },
 })
