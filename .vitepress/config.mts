@@ -10,7 +10,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/zy.png',
     nav: [
-      { text: '前端基础', link: '/packages/js-doc/html5andcss3' },
+      // { text: '前端基础', link: '/packages/js-doc/html5andcss3' },
     ],
 
     sidebar: [
@@ -19,6 +19,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Blob', link: '/packages/js-doc/blob.md' },
+          { text: 'axios是怎样取消请求的', link: '/packages/js-doc/cancelPromise.md' },
         ]
       },
       {
