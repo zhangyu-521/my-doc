@@ -18,12 +18,21 @@ hero:
     #   text: API Examples
     #   link: /api-examples
 
-# features:
-#   - title: Feature A
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - title: Feature B
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - title: Feature C
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+features:
+  - title: js杂谈
+    details: javascript相关技术的笔记
+    link: /packages/js-doc/blob
+    icon: 📚
+    linkText: 了解更多
+  - title: 前端工程化
+    details: 前端工程化相关的笔记
+    link: /packages/engineer/npm
+    icon: 🛠
+    linkText: 了解更多
+  - title: Vue
+    details: vue相关技术的笔记
+    link: /packages/vue/vueShapeFlag
+    icon: 🎨
+    linkText: 了解更多
 ---
 
