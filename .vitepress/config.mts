@@ -28,7 +28,16 @@ export default defineConfig({
         items: [
           { text: 'npm', link: '/packages/engineer/npm.md' },
           { text: '将静态网站部署到Github Pages', link: '/packages/CICD/github-actions.md' },
+          { text: 'monorepo', link: '/packages/engineer/monorepo.md' },
+          { text: 'tsConfig文件详解', link: '/packages/engineer/tsconfig.json文件详解.md' },
 
+        ]
+      },
+      {
+        text: 'vue',
+        collapsed: true,
+        items: [
+          {text: 'vue中对节点的标记shapeFlag', link: '/packages/vue/vueShapeFlag.md'}
         ]
       },
       {
