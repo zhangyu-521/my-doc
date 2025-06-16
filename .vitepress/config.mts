@@ -26,10 +26,12 @@ export default defineConfig({
         text: '前端工程化',
         collapsed: true,
         items: [
+          { text: 'ast', link: '/packages/engineer/ast.md' },
           { text: 'npm', link: '/packages/engineer/npm.md' },
           { text: '将静态网站部署到Github Pages', link: '/packages/CICD/github-actions.md' },
           { text: 'monorepo', link: '/packages/engineer/monorepo.md' },
           { text: 'tsConfig文件详解', link: '/packages/engineer/tsconfig.json文件详解.md' },
+          { text: 'vite-plugins-API', link: '/packages/engineer/vite-plugin.md' },
 
         ]
       },
