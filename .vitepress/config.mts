@@ -53,6 +53,14 @@ export default defineConfig({
           { text: 'Modules模块', link: '/packages/nest-doc/Modules.md' },
           { text: 'Middleware中间件', link: '/packages/nest-doc/Middleware.md' },
         ]
+      },
+      {
+        text: "AI探索",
+        collapsed: true,
+        items:[
+          { text: 'mcp基础', link: '/packages/ai/mcp.md' },
+          { text: 'mcp进阶', link: '/packages/ai/editMcpServer.md' },
+        ]
       }
     ],
 
