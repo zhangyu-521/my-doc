@@ -55,6 +55,13 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Prisma',
+        collapsed: true,
+        items: [
+          { text: 'prisma', link: '/packages/prisma/prisma.md'}
+        ]
+      },
+      {
         text: "AI探索",
         collapsed: true,
         items:[
