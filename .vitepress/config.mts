@@ -39,7 +39,8 @@ export default defineConfig({
         text: 'vue',
         collapsed: true,
         items: [
-          {text: 'vue中对节点的标记shapeFlag', link: '/packages/vue/vueShapeFlag.md'}
+          {text: 'vue中对节点的标记shapeFlag', link: '/packages/vue/vueShapeFlag.md'},
+          {text: 'Vue响应式数据实现原理', link: '/packages/vue/vue-reactivity.md'}
         ]
       },
       {
