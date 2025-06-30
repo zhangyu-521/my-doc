@@ -67,6 +67,7 @@ export default defineConfig({
         items:[
           { text: 'mcp基础', link: '/packages/ai/mcp.md' },
           { text: 'mcp进阶', link: '/packages/ai/editMcpServer.md' },
+          { text: '万能提示词模板', link: '/packages/ai/prompt.md' },
         ]
       }
     ],
