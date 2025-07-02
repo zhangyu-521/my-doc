@@ -11,6 +11,7 @@ export default defineConfig({
     logo: '/zy.png',
     nav: [
       // { text: '前端基础', link: '/packages/js-doc/html5andcss3' },
+      { text: 'NestJS 实战', link: '/nestjs-tutorial/README.md' },
     ],
 
     sidebar: [
@@ -44,7 +45,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Nest',
+        text: 'NestJS 基础',
         collapsed: true,
         items: [
           { text: 'Nest初识', link: '/packages/nest-doc' },
@@ -53,7 +54,52 @@ export default defineConfig({
           { text: 'Providers提供者', link: '/packages/nest-doc/Providers.md' },
           { text: 'Modules模块', link: '/packages/nest-doc/Modules.md' },
           { text: 'Middleware中间件', link: '/packages/nest-doc/Middleware.md' },
-          { text: 'NestJS实战：企业级博客系统', link: '/packages/nest-doc/nest-practice.md' },
+        ]
+      },
+      {
+        text: 'NestJS 实战教程',
+        collapsed: true,
+        items: [
+          {
+            text: '教程概览',
+            link: '/nestjs-tutorial/README.md'
+          },
+          {
+            text: '第1章：项目初始化与环境配置',
+            link: '/nestjs-tutorial/chapter-01/README.md'
+          },
+          {
+            text: '第2章：数据库设计与Prisma配置',
+            link: '/nestjs-tutorial/chapter-02/README.md'
+          },
+          {
+            text: '第3章：用户模块开发',
+            link: '/nestjs-tutorial/chapter-03/README.md'
+          },
+          {
+            text: '第4章：JWT认证与授权',
+            link: '/nestjs-tutorial/chapter-04/README.md'
+          },
+          {
+            text: '第5章：文章管理模块',
+            link: '/nestjs-tutorial/chapter-05/README.md'
+          },
+          {
+            text: '第6章：公共组件与工具',
+            link: '/nestjs-tutorial/chapter-06/README.md'
+          },
+          {
+            text: '第7章：API文档与测试',
+            link: '/nestjs-tutorial/chapter-07/README.md'
+          },
+          {
+            text: '第8章：部署与优化',
+            link: '/nestjs-tutorial/chapter-08/README.md'
+          },
+          {
+            text: '第9章：项目总结与扩展',
+            link: '/nestjs-tutorial/chapter-09/README.md'
+          },
         ]
       },
       {
