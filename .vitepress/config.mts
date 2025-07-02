@@ -53,6 +53,7 @@ export default defineConfig({
           { text: 'Providers提供者', link: '/packages/nest-doc/Providers.md' },
           { text: 'Modules模块', link: '/packages/nest-doc/Modules.md' },
           { text: 'Middleware中间件', link: '/packages/nest-doc/Middleware.md' },
+          { text: 'NestJS实战：企业级博客系统', link: '/packages/nest-doc/nest-practice.md' },
         ]
       },
       {
@@ -60,6 +61,14 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'prisma', link: '/packages/prisma/prisma.md'}
+        ]
+      },
+            {
+        text: "electron",
+        collapsed: true,
+        items:[
+          { text: 'Electron应用打包与分发指南', link: '/packages/electron/build-option.md' },
+          { text: 'Electron进程间通信深度解析', link: '/packages/electron/electron-communication.md' },
         ]
       },
       {
