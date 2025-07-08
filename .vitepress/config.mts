@@ -10,11 +10,58 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/zy.png',
     nav: [
-      // { text: '前端基础', link: '/packages/js-doc/html5andcss3' },
+      { text: '高级JavaScript', link: '/packages/js-doc/index.md' },
       { text: 'NestJS 实战', link: '/nestjs-tutorial/README.md' },
+      { text: 'React Native 教程', link: '/react-native-tutorial/README.md' },
     ],
 
     sidebar: [
+      {
+        text: '高级JavaScript开发指南',
+        collapsed: false,
+        items: [
+          {
+            text: '教程概览',
+            link: '/packages/js-doc/index.md'
+          },
+          {
+            text: '第1章：JavaScript引擎与执行机制',
+            link: '/packages/js-doc/chapter-01/README.md'
+          },
+          {
+            text: '第2章：高级异步编程',
+            link: '/packages/js-doc/chapter-02/README.md'
+          },
+          {
+            text: '第3章：内存管理与性能优化',
+            link: '/packages/js-doc/chapter-03/README.md'
+          },
+          {
+            text: '第4章：函数式编程进阶',
+            link: '/packages/js-doc/chapter-04/README.md'
+          },
+          {
+            text: '第5章：元编程与反射',
+            link: '/packages/js-doc/chapter-05/README.md'
+          },
+          {
+            text: '第6章：模块系统深度解析',
+            link: '/packages/js-doc/chapter-06/README.md'
+          },
+          {
+            text: '第7章：TypeScript高级特性',
+            link: '/packages/js-doc/chapter-07/README.md'
+          },
+          {
+            text: '第8章：设计模式在JavaScript中的应用',
+            link: '/packages/js-doc/chapter-08/README.md'
+          },
+          {
+            text: '第9章：现代JavaScript工具链',
+            link: '/packages/js-doc/chapter-09/README.md'
+          },
+        ]
+      },
       {
         text: 'js杂谈',
         collapsed: true,
@@ -124,6 +171,52 @@ export default defineConfig({
           { text: 'mcp基础', link: '/packages/ai/mcp.md' },
           { text: 'mcp进阶', link: '/packages/ai/editMcpServer.md' },
           { text: '万能提示词模板', link: '/packages/ai/prompt.md' },
+        ]
+      },
+      {
+        text: 'React Native 教程',
+        collapsed: true,
+        items: [
+          {
+            text: '教程概览',
+            link: '/react-native-tutorial/README.md'
+          },
+          {
+            text: '第1章：React Native入门',
+            link: '/react-native-tutorial/chapter-01/README.md'
+          },
+          {
+            text: '第2章：核心组件与布局',
+            link: '/react-native-tutorial/chapter-02/README.md'
+          },
+          {
+            text: '第3章：导航与路由',
+            link: '/react-native-tutorial/chapter-03/README.md'
+          },
+          {
+            text: '第4章：状态管理',
+            link: '/react-native-tutorial/chapter-04/README.md'
+          },
+          {
+            text: '第5章：网络请求与数据处理',
+            link: '/react-native-tutorial/chapter-05/README.md'
+          },
+          {
+            text: '第6章：本地存储',
+            link: '/react-native-tutorial/chapter-06/README.md'
+          },
+          {
+            text: '第7章：原生功能集成',
+            link: '/react-native-tutorial/chapter-07/README.md'
+          },
+          {
+            text: '第8章：性能优化',
+            link: '/react-native-tutorial/chapter-08/README.md'
+          },
+          {
+            text: '第9章：打包与发布',
+            link: '/react-native-tutorial/chapter-09/README.md'
+          },
         ]
       }
     ],
