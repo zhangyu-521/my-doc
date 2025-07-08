@@ -713,4 +713,4 @@ document.getElementById('search')?.addEventListener('input', (e) => {
 
 ---
 
-**继续学习：[第4章：函数式编程进阶](../chapter-04/)**
+**继续学习：[第4章：函数式编程进阶](../chapter-04/README.md)**

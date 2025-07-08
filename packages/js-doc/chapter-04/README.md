@@ -729,4 +729,4 @@ console.log(result); // "Success: 4"
 
 ---
 
-**继续学习：[第5章：元编程与反射](../chapter-05/)**
+**继续学习：[第5章：元编程与反射](../chapter-05/README.md)**
