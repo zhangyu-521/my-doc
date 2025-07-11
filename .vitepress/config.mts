@@ -13,6 +13,7 @@ export default defineConfig({
       { text: '高级JavaScript', link: '/packages/js-doc/index.md' },
       { text: 'NestJS 实战', link: '/nestjs-tutorial/README.md' },
       { text: 'React Native 教程', link: '/react-native-tutorial/README.md' },
+      { text: 'Electron 实战', link: '/electron-tutorial/README.md' },
     ],
 
     sidebar: [
@@ -157,7 +158,53 @@ export default defineConfig({
         ]
       },
             {
-        text: "electron",
+        text: 'Electron 实战教程',
+        collapsed: true,
+        items: [
+          {
+            text: '教程概览',
+            link: '/electron-tutorial/README.md'
+          },
+          {
+            text: '第1章：Electron基础入门',
+            link: '/electron-tutorial/chapter-01/README.md'
+          },
+          {
+            text: '第2章：主进程与渲染进程',
+            link: '/electron-tutorial/chapter-02/README.md'
+          },
+          {
+            text: '第3章：窗口管理与BrowserWindow',
+            link: '/electron-tutorial/chapter-03/README.md'
+          },
+          {
+            text: '第4章：进程间通信(IPC)',
+            link: '/electron-tutorial/chapter-04/README.md'
+          },
+          {
+            text: '第5章：菜单与快捷键',
+            link: '/electron-tutorial/chapter-05/README.md'
+          },
+          {
+            text: '第6章：文件系统与对话框',
+            link: '/electron-tutorial/chapter-06/README.md'
+          },
+          {
+            text: '第7章：应用打包与分发',
+            link: '/electron-tutorial/chapter-07/README.md'
+          },
+          {
+            text: '第8章：性能优化与安全',
+            link: '/electron-tutorial/chapter-08/README.md'
+          },
+          {
+            text: '第9章：实战项目：桌面笔记应用',
+            link: '/electron-tutorial/chapter-09/README.md'
+          },
+        ]
+      },
+      {
+        text: "Electron 基础",
         collapsed: true,
         items:[
           { text: 'Electron应用打包与分发指南', link: '/packages/electron/build-option.md' },
