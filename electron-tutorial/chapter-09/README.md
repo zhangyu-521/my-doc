@@ -514,8 +514,7 @@ class WindowManager {
 module.exports = WindowManager
 ```
 
-module.exports = WindowManager
-```
+
 
 ### 数据库管理器
 

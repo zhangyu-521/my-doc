@@ -540,7 +540,7 @@ class RendererOptimizer {
 document.addEventListener('DOMContentLoaded', () => {
   new RendererOptimizer()
 })
-```
+
 
 // 初始化渲染优化器
 document.addEventListener('DOMContentLoaded', () => {
