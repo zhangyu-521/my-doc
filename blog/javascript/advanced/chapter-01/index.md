@@ -363,4 +363,4 @@ function efficient() {
 
 ---
 
-**继续学习：[第2章：高级异步编程](../chapter-02/README.md)**
+**继续学习：[第2章：高级异步编程](../chapter-02/)**

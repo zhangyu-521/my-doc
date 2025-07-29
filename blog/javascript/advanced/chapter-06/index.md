@@ -830,4 +830,4 @@ const post = user.addPost('Hello', 'World');
 
 ---
 
-**继续学习：[第7章：TypeScript高级特性](../chapter-07/README.md)**
+**继续学习：[第7章：TypeScript高级特性](../chapter-07/)**

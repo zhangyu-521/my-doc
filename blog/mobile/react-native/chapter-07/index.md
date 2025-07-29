@@ -941,4 +941,4 @@ export default DeviceInfoComponent;
 3. 实现一个提醒应用，支持定时通知
 4. 创建一个系统信息查看器
 
-准备好学习性能优化了吗？让我们继续[第8章：性能优化](/react-native-tutorial/chapter-08/README.md)！
+准备好学习性能优化了吗？让我们继续[第8章：性能优化](/blog/mobile/react-native/chapter-08/)！

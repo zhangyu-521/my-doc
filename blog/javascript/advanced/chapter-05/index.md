@@ -926,4 +926,4 @@ console.log(advancedResult);
 
 ---
 
-**继续学习：[第6章：模块系统深度解析](../chapter-06/README.md)**
+**继续学习：[第6章：模块系统深度解析](../chapter-06/)**

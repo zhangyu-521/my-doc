@@ -736,4 +736,4 @@ export default NewsScreen;
 3. 开发一个支持离线缓存的文章阅读应用
 4. 添加请求重试和超时处理机制
 
-准备好学习本地存储了吗？让我们继续[第6章：本地存储](/react-native-tutorial/chapter-06/README.md)！
+准备好学习本地存储了吗？让我们继续[第6章：本地存储](/blog/mobile/react-native/chapter-06/)！

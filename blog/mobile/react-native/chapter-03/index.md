@@ -1084,5 +1084,5 @@ async function checkAuthStatus(): Promise<boolean> {
 3. 添加深度链接支持，允许通过 URL 直接访问特定页面
 4. 自定义导航动画，实现独特的页面切换效果
 
-准备好学习状态管理了吗？让我们继续[第4章：状态管理](/react-native-tutorial/chapter-04/README.md)！
+准备好学习状态管理了吗？让我们继续[第4章：状态管理](/blog/mobile/react-native/chapter-04/)！
 ```

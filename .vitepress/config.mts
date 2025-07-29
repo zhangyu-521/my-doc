@@ -6,6 +6,13 @@ export default defineConfig({
   title: "zyDocs",
   description: "该学习了，少年",
   head: [['link', { rel: 'icon', href: '/zy.ico' }]],
+
+  // 构建优化配置
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 2000, // 提高警告阈值到2MB，避免警告
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/zy.png',

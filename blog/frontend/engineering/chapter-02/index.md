@@ -551,4 +551,4 @@ pnpm why lodash
 
 ---
 
-[上一章：前端工程化概述与环境搭建](../chapter-01/README.md) | [返回目录](../README.md) | [下一章：模块化与构建工具](../chapter-03/README.md)
+[上一章：前端工程化概述与环境搭建](../chapter-01/) | [返回目录](../) | [下一章：模块化与构建工具](../chapter-03/)

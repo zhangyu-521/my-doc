@@ -19,63 +19,63 @@
 
 ## 📚 教程大纲
 
-### [第1章：React Native入门](/react-native-tutorial/chapter-01/README.md)
+### [第1章：React Native入门](/blog/mobile/react-native/chapter-01/)
 - React Native 简介与优势
 - 开发环境搭建（Windows/macOS）
 - 创建第一个应用
 - 项目结构详解
 - 调试工具使用
 
-### [第2章：核心组件与布局](/react-native-tutorial/chapter-02/README.md)
+### [第2章：核心组件与布局](/blog/mobile/react-native/chapter-02/)
 - 基础组件：View、Text、Image
 - 交互组件：Button、TextInput、TouchableOpacity
 - 列表组件：FlatList、SectionList
 - Flexbox 布局系统
 - 样式与主题
 
-### [第3章：导航与路由](/react-native-tutorial/chapter-03/README.md)
+### [第3章：导航与路由](/blog/mobile/react-native/chapter-03/)
 - React Navigation 安装配置
 - Stack Navigator 堆栈导航
 - Tab Navigator 标签导航
 - Drawer Navigator 抽屉导航
 - 参数传递与深度链接
 
-### [第4章：状态管理](/react-native-tutorial/chapter-04/README.md)
+### [第4章：状态管理](/blog/mobile/react-native/chapter-04/)
 - useState 和 useEffect Hooks
 - Context API 全局状态
 - 自定义 Hooks
 - 状态管理最佳实践
 - Redux Toolkit 集成（可选）
 
-### [第5章：网络请求与数据处理](/react-native-tutorial/chapter-05/README.md)
+### [第5章：网络请求与数据处理](/blog/mobile/react-native/chapter-05/)
 - Fetch API 使用
 - Axios 网络库
 - 错误处理和重试机制
 - 数据缓存策略
 - 加载状态管理
 
-### [第6章：本地存储](/react-native-tutorial/chapter-06/README.md)
+### [第6章：本地存储](/blog/mobile/react-native/chapter-06/)
 - AsyncStorage 异步存储
 - 数据持久化方案
 - 安全存储（Keychain/Keystore）
 - SQLite 数据库集成
 - 离线数据同步
 
-### [第7章：原生功能集成](/react-native-tutorial/chapter-07/README.md)
+### [第7章：原生功能集成](/blog/mobile/react-native/chapter-07/)
 - 相机和相册访问
 - 地理位置服务
 - 推送通知
 - 设备信息获取
 - 第三方库集成
 
-### [第8章：性能优化](/react-native-tutorial/chapter-08/README.md)
+### [第8章：性能优化](/blog/mobile/react-native/chapter-08/)
 - 性能监控工具
 - 渲染优化技巧
 - 内存管理
 - 包大小优化
 - 启动时间优化
 
-### [第9章：打包与发布](/react-native-tutorial/chapter-09/README.md)
+### [第9章：打包与发布](/blog/mobile/react-native/chapter-09/)
 - Android 应用打包
 - iOS 应用打包
 - 代码签名配置
@@ -155,6 +155,6 @@
 
 ---
 
-准备好开始你的 React Native 学习之旅了吗？让我们从[第一章](/react-native-tutorial/chapter-01/README.md)开始吧！
+准备好开始你的 React Native 学习之旅了吗？让我们从[第一章](/blog/mobile/react-native/chapter-01/)开始吧！
 
 > 💡 **提示**：建议在学习过程中准备一台 Android 设备或使用模拟器进行测试，这样能获得更好的学习体验。

@@ -1405,5 +1405,5 @@ export default ProfileCard;
 2. 尝试创建一个简单的商品列表页面
 3. 实践不同的布局方式，理解 Flexbox 的各种属性
 
-准备好学习导航了吗？让我们继续[第3章：导航与路由](/react-native-tutorial/chapter-03/README.md)！
+准备好学习导航了吗？让我们继续[第3章：导航与路由](/blog/mobile/react-native/chapter-03/)！
 ```

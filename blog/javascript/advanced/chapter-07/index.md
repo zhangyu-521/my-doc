@@ -717,4 +717,4 @@ type UserModel = DatabaseModel<User>;
 
 ---
 
-**继续学习：[第8章：设计模式在JavaScript中的应用](../chapter-08/README.md)**
+**继续学习：[第8章：设计模式在JavaScript中的应用](../chapter-08/)**

@@ -758,4 +758,4 @@ export default UserProfile;
 2. 实现一个主题切换功能，使用 Context API 全局管理
 3. 开发一个通知系统，支持添加、删除和自动消失功能
 
-准备好学习网络请求了吗？让我们继续[第5章：网络请求与数据处理](/react-native-tutorial/chapter-05/README.md)！
+准备好学习网络请求了吗？让我们继续[第5章：网络请求与数据处理](/blog/mobile/react-native/chapter-05/)！

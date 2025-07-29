@@ -861,4 +861,4 @@ if (fs.existsSync(distDir)) {
 
 ---
 
-[上一章：开发体验优化](../chapter-07/README.md) | [返回目录](../README.md) | [下一章：CI/CD与自动化部署](../chapter-09/README.md)
+[上一章：开发体验优化](../chapter-07/) | [返回目录](../) | [下一章：CI/CD与自动化部署](../chapter-09/)

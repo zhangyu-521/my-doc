@@ -697,4 +697,4 @@ import _ from 'lodash'; // 会导入整个库
 
 ---
 
-[上一章：包管理与依赖管理](../chapter-02/README.md) | [返回目录](../README.md) | [下一章：代码质量保障](../chapter-04/README.md)
+[上一章：包管理与依赖管理](../chapter-02/) | [返回目录](../) | [下一章：代码质量保障](../chapter-04/)

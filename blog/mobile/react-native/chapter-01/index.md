@@ -891,4 +891,4 @@ const styles = StyleSheet.create({
 export default CounterApp;
 ```
 
-准备好了吗？让我们继续学习[第2章：核心组件与布局](/react-native-tutorial/chapter-02/README.md)！
+准备好了吗？让我们继续学习[第2章：核心组件与布局](/blog/mobile/react-native/chapter-02/)！

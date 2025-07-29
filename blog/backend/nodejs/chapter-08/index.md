@@ -837,4 +837,4 @@ module.exports = { app, httpsServer, httpServer };
 
 ---
 
-[上一章：数据库集成与ORM](../chapter-07/README.md) | [返回目录](../README.md) | [下一章：测试与部署](../chapter-09/README.md)
+[上一章：数据库集成与ORM](../chapter-07/) | [返回目录](../) | [下一章：测试与部署](../chapter-09/)

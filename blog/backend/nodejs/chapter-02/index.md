@@ -585,4 +585,4 @@ module.exports = { AppError };
 
 ---
 
-[上一章：Node.js基础与环境搭建](../chapter-01/README.md) | [返回目录](../README.md) | [下一章：异步编程与事件循环](../chapter-03/README.md)
+[上一章：Node.js基础与环境搭建](../chapter-01/) | [返回目录](../) | [下一章：异步编程与事件循环](../chapter-03/)

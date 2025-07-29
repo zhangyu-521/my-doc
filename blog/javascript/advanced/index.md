@@ -25,63 +25,63 @@
 
 ## 📖 章节目录
 
-### [第1章：JavaScript引擎与执行机制](./chapter-01/README.md)
+### [第1章：JavaScript引擎与执行机制](./chapter-01/)
 - V8引擎架构解析
 - 事件循环深度剖析
 - 调用栈与执行上下文
 - 任务队列与微任务
 - 内存堆与垃圾回收
 
-### [第2章：高级异步编程](./chapter-02/README.md)
+### [第2章：高级异步编程](./chapter-02/)
 - Promise实现原理
 - async/await底层机制
 - Generator与异步迭代器
 - 并发控制与错误处理
 - 取消异步操作
 
-### [第3章：内存管理与性能优化](./chapter-03/README.md)
+### [第3章：内存管理与性能优化](./chapter-03/)
 - 垃圾回收算法详解
 - 内存泄漏检测与预防
 - 性能分析工具使用
 - 代码优化策略
 - 浏览器渲染优化
 
-### [第4章：函数式编程进阶](./chapter-04/README.md)
+### [第4章：函数式编程进阶](./chapter-04/)
 - 高阶函数与闭包
 - 柯里化与偏函数应用
 - 函数组合与管道
 - 不可变数据结构
 - Monad概念与应用
 
-### [第5章：元编程与反射](./chapter-05/README.md)
+### [第5章：元编程与反射](./chapter-05/)
 - Proxy深度应用
 - Reflect API详解
 - Symbol的高级用法
 - 装饰器模式实现
 - 动态代码生成
 
-### [第6章：模块系统深度解析](./chapter-06/README.md)
+### [第6章：模块系统深度解析](./chapter-06/)
 - ES6模块机制
 - CommonJS vs ES6模块
 - 动态导入与代码分割
 - 模块打包原理
 - 循环依赖处理
 
-### [第7章：TypeScript高级特性](./chapter-07/README.md)
+### [第7章：TypeScript高级特性](./chapter-07/)
 - 泛型编程
 - 条件类型与映射类型
 - 模板字面量类型
 - 类型体操技巧
 - 声明文件编写
 
-### [第8章：设计模式在JavaScript中的应用](./chapter-08/README.md)
+### [第8章：设计模式在JavaScript中的应用](./chapter-08/)
 - 创建型模式
 - 结构型模式
 - 行为型模式
 - 函数式设计模式
 - 现代框架中的模式
 
-### [第9章：现代JavaScript工具链](./chapter-09/README.md)
+### [第9章：现代JavaScript工具链](./chapter-09/)
 - Webpack深度配置
 - Vite构建优化
 - Babel转换原理

@@ -887,4 +887,4 @@ if (entityName) {
 
 ---
 
-[上一章：性能优化与监控](../chapter-06/README.md) | [返回目录](../README.md) | [下一章：多环境管理与配置](../chapter-08/README.md)
+[上一章：性能优化与监控](../chapter-06/) | [返回目录](../) | [下一章：多环境管理与配置](../chapter-08/)

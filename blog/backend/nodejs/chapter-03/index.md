@@ -633,4 +633,4 @@ async function runComparison() {
 
 ---
 
-[上一章：模块系统深入理解](../chapter-02/README.md) | [返回目录](../README.md) | [下一章：文件系统与流操作](../chapter-04/README.md)
+[上一章：模块系统深入理解](../chapter-02/) | [返回目录](../) | [下一章：文件系统与流操作](../chapter-04/)

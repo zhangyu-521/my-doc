@@ -750,4 +750,4 @@ export const optimizedAPI = new OptimizedAPIService();
 3. 实现图片懒加载和缓存机制
 4. 分析并优化应用的启动时间
 
-准备好学习应用打包和发布了吗？让我们继续[第9章：打包与发布](/react-native-tutorial/chapter-09/README.md)！
+准备好学习应用打包和发布了吗？让我们继续[第9章：打包与发布](/blog/mobile/react-native/chapter-09/)！

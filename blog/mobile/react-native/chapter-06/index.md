@@ -923,4 +923,4 @@ export default UserManagementScreen;
 3. 开发一个离线优先的待办事项应用
 4. 添加数据备份和恢复功能
 
-准备好学习原生功能了吗？让我们继续[第7章：原生功能集成](/react-native-tutorial/chapter-07/README.md)！
+准备好学习原生功能了吗？让我们继续[第7章：原生功能集成](/blog/mobile/react-native/chapter-07/)！

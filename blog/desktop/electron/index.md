@@ -25,55 +25,55 @@
 
 ## 教程目录
 
-### [第1章：Electron 基础入门](./chapter-01/README.md)
+### [第1章：Electron 基础入门](./chapter-01/)
 - Electron 是什么
 - 架构原理和优势
 - 开发环境搭建
 - 第一个 Hello World 应用
 
-### [第2章：主进程与渲染进程](./chapter-02/README.md)
+### [第2章：主进程与渲染进程](./chapter-02/)
 - 进程模型详解
 - 主进程的职责和 API
 - 渲染进程的特点
 - 进程生命周期管理
 
-### [第3章：窗口管理与 BrowserWindow](./chapter-03/README.md)
+### [第3章：窗口管理与 BrowserWindow](./chapter-03/)
 - BrowserWindow API 详解
 - 窗口创建和配置
 - 多窗口管理
 - 窗口状态控制
 
-### [第4章：进程间通信(IPC)](./chapter-04/README.md)
+### [第4章：进程间通信(IPC)](./chapter-04/)
 - IPC 通信机制
 - ipcMain 和 ipcRenderer
 - 同步与异步通信
 - 数据传递最佳实践
 
-### [第5章：菜单与快捷键](./chapter-05/README.md)
+### [第5章：菜单与快捷键](./chapter-05/)
 - 应用菜单创建
 - 上下文菜单
 - 全局快捷键
 - 系统托盘
 
-### [第6章：文件系统与对话框](./chapter-06/README.md)
+### [第6章：文件系统与对话框](./chapter-06/)
 - 文件操作 API
 - 文件选择对话框
 - 系统通知
 - 剪贴板操作
 
-### [第7章：应用打包与分发](./chapter-07/README.md)
+### [第7章：应用打包与分发](./chapter-07/)
 - electron-builder 配置
 - 多平台打包
 - 代码签名
 - 自动更新机制
 
-### [第8章：性能优化与安全](./chapter-08/README.md)
+### [第8章：性能优化与安全](./chapter-08/)
 - 性能优化策略
 - 内存管理
 - 安全最佳实践
 - 常见问题排查
 
-### [第9章：实战项目：桌面笔记应用](./chapter-09/README.md)
+### [第9章：实战项目：桌面笔记应用](./chapter-09/)
 - 项目需求分析
 - 架构设计
 - 功能实现
