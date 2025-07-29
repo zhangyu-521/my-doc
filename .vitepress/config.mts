@@ -157,7 +157,7 @@ export default defineConfig({
           { text: 'prisma', link: '/packages/prisma/prisma.md'}
         ]
       },
-            {
+      {
         text: 'Electron 实战教程',
         collapsed: true,
         items: [
@@ -265,11 +265,57 @@ export default defineConfig({
             link: '/react-native-tutorial/chapter-09/README.md'
           },
         ]
+      },
+      {
+        text: 'Node.js 深度教程',
+        collapsed: true,
+        items: [
+          {
+            text: '教程概览',
+            link: '/nodejs-tutorial/README.md'
+          },
+          {
+            text: '第1章：Node.js基础与环境搭建',
+            link: '/nodejs-tutorial/chapter-01/README.md'
+          },
+          {
+            text: '第2章：模块系统深入理解',
+            link: '/nodejs-tutorial/chapter-02/README.md'
+          },
+          {
+            text: '第3章：异步编程与事件循环',
+            link: '/nodejs-tutorial/chapter-03/README.md'
+          },
+          {
+            text: '第4章：文件系统与流操作',
+            link: '/nodejs-tutorial/chapter-04/README.md'
+          },
+          {
+            text: '第5章：HTTP服务器与网络编程',
+            link: '/nodejs-tutorial/chapter-05/README.md'
+          },
+          {
+            text: '第6章：Express框架深度应用',
+            link: '/nodejs-tutorial/chapter-06/README.md'
+          },
+          {
+            text: '第7章：数据库集成与ORM',
+            link: '/nodejs-tutorial/chapter-07/README.md'
+          },
+          {
+            text: '第8章：认证授权与安全',
+            link: '/nodejs-tutorial/chapter-08/README.md'
+          },
+          {
+            text: '第9章：测试与部署',
+            link: '/nodejs-tutorial/chapter-09/README.md'
+          },
+        ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/zhangyu-521' }
     ],
 
     lastUpdated: {
