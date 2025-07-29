@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/',
+  base: '/my-doc/',
   title: "zyDocs",
   description: "该学习了，少年",
   head: [['link', { rel: 'icon', href: '/zy.ico' }]],
