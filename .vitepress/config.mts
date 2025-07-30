@@ -36,8 +36,7 @@ export default defineConfig({
         text: '后端开发',
         items: [
           { text: 'NestJS 实战', link: '/blog/backend/nestjs/' },
-          { text: 'Node.js 进阶', link: '/blog/backend/nodejs/' },
-          { text: 'Prisma ORM', link: '/blog/backend/prisma/' },
+          { text: 'Node.js 进阶', link: '/blog/backend/nodejs/chapter-01' },
         ]
       },
       {
