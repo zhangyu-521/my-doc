@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /blog/
+      link: /blog/javascript/advanced/
     - theme: alt
       text: JavaScript 插件系统
       link: /blog/javascript/plugin-system/
