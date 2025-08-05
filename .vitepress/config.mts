@@ -96,7 +96,7 @@ export default defineConfig({
             { text: '第5章：元编程与反射', link: '/blog/javascript/advanced/chapter-05/' },
             { text: '第6章：模块系统深入', link: '/blog/javascript/advanced/chapter-06/' },
             { text: '第7章：TypeScript 进阶', link: '/blog/javascript/advanced/chapter-07/' },
-            { text: '第8章：测试与调试', link: '/blog/javascript/advanced/chapter-08/' },
+            { text: '第8章：设计模式', link: '/blog/javascript/advanced/chapter-08/' },
             { text: '第9章：项目实战', link: '/blog/javascript/advanced/chapter-09/' },
           ]
         }
