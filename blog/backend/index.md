@@ -24,16 +24,3 @@ Node.js 的高级特性和最佳实践。
 - 错误处理
 - 部署与运维
 
-
-
-## 🎯 学习路径
-
-1. **Node.js 基础** - 掌握 Node.js 核心概念
-2. **框架学习** - 学习 NestJS 框架
-3. **数据库操作** - 掌握 Prisma ORM
-4. **项目实战** - 构建完整的后端应用
-
-## 🔗 相关资源
-
-- [JavaScript 系列](/blog/javascript/) - JavaScript 进阶学习
-- [前端开发](/blog/frontend/) - 前后端协作

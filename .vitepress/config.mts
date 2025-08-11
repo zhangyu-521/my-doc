@@ -29,7 +29,6 @@ export default defineConfig({
         text: '前端开发',
         items: [
           { text: '前端工程化', link: '/blog/frontend/engineering/' },
-          { text: 'Vue.js 学习', link: '/blog/frontend/vue/' },
         ]
       },
       {
@@ -224,7 +223,6 @@ export default defineConfig({
           items: [
             { text: '前端概览', link: '/blog/frontend/' },
             { text: '前端工程化', link: '/blog/frontend/engineering/' },
-            { text: 'Vue.js 学习', link: '/blog/frontend/vue/' },
           ]
         }
       ],
@@ -238,7 +236,6 @@ export default defineConfig({
             { text: '后端概览', link: '/blog/backend/' },
             { text: 'NestJS 实战', link: '/blog/backend/nestjs/' },
             { text: 'Node.js 进阶', link: '/blog/backend/nodejs/' },
-            { text: 'Prisma ORM', link: '/blog/backend/prisma/' },
           ]
         }
       ],
@@ -286,13 +283,12 @@ export default defineConfig({
           text: 'zyDocs 博客',
           collapsed: false,
           items: [
-            { text: '博客首页', link: '/blog/' },
-            { text: 'JavaScript 系列', link: '/blog/javascript/' },
+            { text: '我的开源项目', link: '/blog/myself/' },
+            { text: 'JavaScript', link: '/blog/javascript/' },
             { text: '前端开发', link: '/blog/frontend/' },
             { text: '后端开发', link: '/blog/backend/' },
             { text: '移动端开发', link: '/blog/mobile/' },
             { text: '桌面应用开发', link: '/blog/desktop/' },
-            { text: '工程化与运维', link: '/blog/engineering/' },
           ]
         }
       ],

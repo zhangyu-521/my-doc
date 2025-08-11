@@ -12,26 +12,28 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /blog/javascript/advanced/
-    - theme: alt
-      text: JavaScript 插件系统
-      link: /blog/javascript/plugin-system/
+      link: /blog/myself
 
 features:
+  - title: 我的开源
+    details: 个人的开源项目
+    link: /blog/myself/
+    icon: 👍
+    linkText: 开始学习
   - title: JavaScript 系列
     details: 深入理解JavaScript的核心概念和插件系统设计，包含完整的实战教程
     link: /blog/javascript/
-    icon: 🟨
+    icon: 🙌
     linkText: 开始学习
-  - title: 前端开发
-    details: 现代前端开发技术和工程化实践，包括Vue.js、构建工具等
+  - title: 前端工程化
+    details: 现代前端开发技术和工程化实践,构建工具等
     link: /blog/frontend/
-    icon: 🟦
+    icon: 👌
     linkText: 了解更多
   - title: 后端开发
     details: Node.js后端开发技术，包含NestJS实战和Prisma ORM使用指南
     link: /blog/backend/
-    icon: 🟩
+    icon: 🎶
     linkText: 了解更多
   - title: 移动端开发
     details: React Native跨平台移动应用开发，从基础到实战的完整指南
@@ -43,9 +45,4 @@ features:
     link: /blog/desktop/
     icon: 🖥️
     linkText: 开始学习
-  - title: 工程化与运维
-    details: 现代软件开发的工程化实践，包括CI/CD和AI工具应用
-    link: /blog/engineering/
-    icon: ⚙️
-    linkText: 了解更多
 ---

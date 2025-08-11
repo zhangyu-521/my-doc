@@ -22,8 +22,3 @@
 3. **原生集成** - 掌握系统 API 调用
 4. **应用打包** - 学习应用打包和分发
 5. **项目实战** - 开发完整的桌面应用
-
-## 🔗 相关资源
-
-- [JavaScript 系列](/blog/javascript/) - JavaScript 基础
-- [前端开发](/blog/frontend/) - Web 技术基础
