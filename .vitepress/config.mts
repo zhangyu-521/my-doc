@@ -26,7 +26,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '前端开发',
+        text: '前端工程化',
         items: [
           { text: '前端工程化', link: '/blog/frontend/engineering/' },
         ]
@@ -215,10 +215,9 @@ export default defineConfig({
         }
       ],
 
-      // 前端开发
       '/blog/frontend/': [
         {
-          text: '前端开发',
+          text: '前端工程化',
           collapsed: false,
           items: [
             { text: '前端概览', link: '/blog/frontend/' },
@@ -285,7 +284,7 @@ export default defineConfig({
           items: [
             { text: '我的开源项目', link: '/blog/myself/' },
             { text: 'JavaScript', link: '/blog/javascript/' },
-            { text: '前端开发', link: '/blog/frontend/' },
+            { text: '前端工程化', link: '/blog/frontend/' },
             { text: '后端开发', link: '/blog/backend/' },
             { text: '移动端开发', link: '/blog/mobile/' },
             { text: '桌面应用开发', link: '/blog/desktop/' },
