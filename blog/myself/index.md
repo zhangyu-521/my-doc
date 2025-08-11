@@ -58,3 +58,14 @@
 | `Esc`          | 取消编辑状态         |
 | `Enter`        | 添加新任务或确认编辑 |
 | `双击任务`     | 编辑任务内容         |
+
+
+## react和nodejs实现大文件分片上传
+
+- [react 和 nodejs 实现大文件分片上传](https://github.com/zhangyu-521/file_upload): 一个基于 React 和 Node.js 的大文件分片上传示例项目。
+### 功能
+- 分片上传
+- 断点续传
+- 进度显示
+- 秒传
+- 本地预览
