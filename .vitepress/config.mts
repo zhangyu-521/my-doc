@@ -283,11 +283,19 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '我的开源项目', link: '/blog/myself/' },
-            { text: 'JavaScript', link: '/blog/javascript/' },
-            { text: '前端工程化', link: '/blog/frontend/' },
-            { text: '后端开发', link: '/blog/backend/' },
-            { text: '移动端开发', link: '/blog/mobile/' },
-            { text: '桌面应用开发', link: '/blog/desktop/' },
+            { text: 'react-native常用元素', link: '/blog/myself/react-native-element.md' },
+            {text: 'vue中对节点的标记shapeFlag', link: '/packages/vue/vueShapeFlag.md'},
+            {text: 'Vue响应式数据实现原理', link: '/packages/vue/vue-reactivity.md'},
+            { text: 'mcp基础', link: '/packages/ai/mcp.md' },
+            { text: 'mcp进阶', link: '/packages/ai/editMcpServer.md' },
+            { text: '万能提示词模板', link: '/packages/ai/prompt.md' },
+            { text: 'node开发MCP server', link: '/packages/ai/nodejs-mcp-server-guide.md' },
+
+            // { text: 'JavaScript', link: '/blog/javascript/' },
+            // { text: '前端工程化', link: '/blog/frontend/' },
+            // { text: '后端开发', link: '/blog/backend/' },
+            // { text: '移动端开发', link: '/blog/mobile/' },
+            // { text: '桌面应用开发', link: '/blog/desktop/' },
           ]
         }
       ],
