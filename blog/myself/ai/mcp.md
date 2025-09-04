@@ -39,16 +39,16 @@ MCP 的架构由四个关键部分组成：
 ::: tip
 Cline 支持多种大模型，我这里选择的是 `DeepseeK`
 :::
-<img src="../../public/mcp3.png">
+<img src="../../../public/mcp3.png">
 
 - 在`MCP`面板，问今天天气怎么样，发现`Cline`会调用大模型，然后寻找天气相关的`MCP Server`，最后返回结果
 - 如果没有天气相关的 `MCP Server`, 我们可以在市场寻找相关的MCP Server,安装即可
-<img src="../../public/mcp4.png">
+<img src="../../../public/mcp4.png">
 
 ## 手动配置MCP Server
 
 - 有时候需要手动配置`MCP Server`，比如`Cline`没有找到天气相关的`MCP Server`,我们可以手动配置一个`MCP Server`
-<img src="../../public/mcp5.png">
+<img src="../../../public/mcp5.png">
 
 ## MCP的交互流程详解
 ::: tip
@@ -58,13 +58,13 @@ Cline 支持多种大模型，我这里选择的是 `DeepseeK`
 - 用户 就是`我们`，比如这里就是问天气
 :::
 下面是询问天气后的，执行流程：
-<img src="../../public/mcp.png">
+<img src="../../../public/mcp.png">
 
 ## MCP相关市场
 ::: tip
 有些MCP是`node`写的，有的是`Python`写的，需要安装对应的运行环境
 :::
-<img src="../../public/mcp2.png">
+<img src="../../../public/mcp2.png">
 
 - [mcpmarket](https://mcpmarket.com/zh)
 - [mcp.so](https://mcp.so/)
