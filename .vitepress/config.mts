@@ -284,7 +284,8 @@ export default defineConfig({
           items: [
             { text: '我的开源项目', link: '/blog/myself/' },
             { text: 'react-native常用元素', link: '/blog/myself/react-native-element.md' },
-            { text: 'react-native常用hook', link: '/blog/myself/react-native-hooks.md' },
+            { text: 'expo router', link: '/blog/myself/expo-router.md' },
+            { text: 'react常用hook', link: '/blog/myself/react-native-hooks.md' },
             {text: 'vue中对节点的标记shapeFlag', link: '/blog/myself/vue/vueShapeFlag.md'},
             {text: 'Vue响应式数据实现原理', link: '/blog/myself/vue/vue-reactivity.md'},
             { text: 'mcp基础', link: '/blog/myself/ai/mcp.md' },
