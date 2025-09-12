@@ -1,12 +1,15 @@
+::: v-pre
+
+
 # Expo Router 使用文档
 
 Expo Router 是一个基于文件系统的路由解决方案，它让你的应用导航变得像创建文件和文件夹一样简单。它为 React Native 和 Web 平台提供了统一的、声明式的导航方式，灵感来源于 Next.js。
 
------
+
 
 ## 核心概念
 
-### 1\. 文件系统路由
+### 1. 文件系统路由
 
 你不需要手动配置路由。只需在 `app/` 目录下创建文件和文件夹，每个文件都会自动成为一个可导航的路由。
 
@@ -16,7 +19,7 @@ Expo Router 是一个基于文件系统的路由解决方案，它让你的应�
 | `app/profile.js` | `/profile` |
 | `app/settings/account.js` | `/settings/account` |
 
-### 2\. 动态路由
+### 2. 动态路由
 
 使用方括号 `[]` 定义动态参数。
 
@@ -25,7 +28,7 @@ Expo Router 是一个基于文件系统的路由解决方案，它让你的应�
 | `app/user/[id].js` | `/user/123` |
 | `app/post/[slug].js` | `/post/my-first-post` |
 
-### 3\. 布局（Layout）
+### 3. 布局（Layout）
 
 使用 `_layout.js` 文件来定义父级路由的共享布局，例如导航栏或底部标签栏。
 
@@ -34,11 +37,11 @@ Expo Router 是一个基于文件系统的路由解决方案，它让你的应�
 | `app/_layout.js` | 顶级布局，影响所有路由 |
 | `app/(tabs)/_layout.js` | 为 `(tabs)` 目录下的所有路由创建标签导航 |
 
------
+
 
 ## 常用 API 和组件
 
-### 1\. `<Link />` 组件
+### 1. `<Link />` 组件
 
 `<Link />` 是一个用于在应用内导航的组件，类似于网页中的 `<a>` 标签。
 
@@ -51,8 +54,7 @@ Expo Router 是一个基于文件系统的路由解决方案，它让你的应�
   * **`asChild`**: 允许你将 `Link` 的功能应用于其子组件，例如一个自定义按钮。
 
 #### 示例
-
-```jsx
+``` jsx
 import { Link } from 'expo-router';
 import { Pressable, Text } from 'react-native';
 
@@ -72,19 +74,17 @@ import { Pressable, Text } from 'react-native';
 </Link>
 ```
 
------
 
-### 2\. `useRouter()` Hook
+### 2. `useRouter()` Hook
 
-`useRouter()` 是一个 Hook，用于通过编程方式进行导航，常用于按钮点击事件或表单提交后。
+`useRouter()` 是一个 Hook，用于通过编程方式进行导航，常用于按钮点击事件或表单提交后
 
 #### 方法
-
-  * **`push(href)`**: 推入一个新的路由到导航栈。
-  * **`replace(href)`**: 替换当前路由。
-  * **`back()`**: 返回上一个路由。
-  * **`canGoBack()`**: 返回一个布尔值，表示是否可以返回。
-  * **`setParams(params)`**: 更新当前路由的参数。
+- `replace(href)`: 替换当前路由
+- `push(href)`: 推入一个新的路由到导航栈。
+- `back()`: 返回上一个路由。
+- `canGoBack()`: 返回一个布尔值，表示是否可以返回。
+- `setParams(params)`: 更新当前路由的参数。
 
 #### 示例
 
@@ -114,9 +114,9 @@ export default function Profile() {
 }
 ```
 
------
 
-### 3\. `useLocalSearchParams()` Hook
+
+### 3. `useLocalSearchParams()` Hook
 
 `useLocalSearchParams()` 用于获取当前路由中的动态参数。
 
@@ -137,9 +137,9 @@ export default function PostDetail() {
 }
 ```
 
------
 
-### 4\. `<Stack />` 组件
+
+### 4. `<Stack />` 组件
 
 `<Stack />` 是一个导航容器，用于管理堆栈式导航。通常在 `_layout.js` 文件中使用。
 
@@ -198,9 +198,9 @@ export default function AppLayout() {
 }
 ```
 
------
 
-### 5\. `<Tabs />` 组件
+
+### 5. `<Tabs />` 组件
 
 `<Tabs />` 是一个导航容器，用于管理底部标签导航。通常在分组目录的 `_layout.js` 中使用。
 
@@ -249,4 +249,4 @@ export default function TabRoutesLayout() {
     </Tabs>
   );
 }
-```
+:::

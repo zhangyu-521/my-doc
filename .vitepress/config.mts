@@ -346,6 +346,11 @@ export default defineConfig({
       dangerLabel: "危险",
       detailsLabel: "详情",
       infoLabel: "信息",
+    },
+    // 配置Markdown以纯Markdown语法处理，避免JavaScript表达式解析错误
+    config: (md) => {
+      // 禁用Vue组件处理，保持纯Markdown语法
+      md.options.html = false;
     }
    
   },
