@@ -291,6 +291,7 @@ export default defineConfig({
             { text: 'mcp基础', link: '/blog/myself/ai/mcp.md' },
             { text: 'mcp进阶', link: '/blog/myself/ai/editMcpServer.md' },
             { text: '万能提示词模板', link: '/blog/myself/ai/prompt.md' },
+            { text: 'eas build流程', link: '/blog/myself/eas-build.md' },
 
             // { text: 'JavaScript', link: '/blog/javascript/' },
             // { text: '前端工程化', link: '/blog/frontend/' },
