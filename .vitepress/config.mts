@@ -296,12 +296,24 @@ export default defineConfig({
             { text: 'react-native中的手势库', link: '/blog/myself/react-native-gesture-handler.md' },
             { text: 'expo router', link: '/blog/myself/expo-router.md' },
             { text: 'react常用hook', link: '/blog/myself/react-native-hooks.md' },
-            {text: 'vue中对节点的标记shapeFlag', link: '/blog/myself/vue/vueShapeFlag.md'},
-            {text: 'Vue响应式数据实现原理', link: '/blog/myself/vue/vue-reactivity.md'},
+            { text: 'vue中对节点的标记shapeFlag', link: '/blog/myself/vue/vueShapeFlag.md' },
+            { text: 'Vue响应式数据实现原理', link: '/blog/myself/vue/vue-reactivity.md' },
             { text: 'mcp基础', link: '/blog/myself/ai/mcp.md' },
             { text: 'mcp进阶', link: '/blog/myself/ai/editMcpServer.md' },
             { text: '万能提示词模板', link: '/blog/myself/ai/prompt.md' },
             { text: 'eas build流程', link: '/blog/myself/eas-build.md' },
+            {
+
+              text: '算法与数据结构',
+              collapsed: true,
+              items: [
+                { text: '栈', link: '/blog/myself/js-data/stack.md' },
+                { text: '集合', link: '/blog/myself/js-data/set.md' },
+                { text: '队列', link: '/blog/myself/js-data/queue.md' },
+                { text: '链表', link: '/blog/myself/js-data/linked-list.md' },
+                { text: '树', link: '/blog/myself/js-data/tree.md' }
+              ]
+            }
 
             // { text: 'JavaScript', link: '/blog/javascript/' },
             // { text: '前端工程化', link: '/blog/frontend/' },
@@ -330,8 +342,8 @@ export default defineConfig({
       next: '下一页'
     },
 
-        //中文配置
-    langMenuLabel: "多语言", 
+    //中文配置
+    langMenuLabel: "多语言",
     returnToTopLabel: "回到顶部",
     sidebarMenuLabel: "菜单",
     darkModeSwitchLabel: "主题",
@@ -350,7 +362,7 @@ export default defineConfig({
     //显示行数
     lineNumbers: true,
     //中文配置
-    container:{
+    container: {
       tipLabel: "提示",
       warningLabel: "警告",
       noteLabel: "注意",
@@ -363,6 +375,6 @@ export default defineConfig({
       // 禁用Vue组件处理，保持纯Markdown语法
       md.options.html = false;
     }
-   
+
   },
 })
