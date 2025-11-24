@@ -302,6 +302,7 @@ export default defineConfig({
             { text: 'mcp进阶', link: '/blog/myself/ai/editMcpServer.md' },
             { text: '万能提示词模板', link: '/blog/myself/ai/prompt.md' },
             { text: 'eas build流程', link: '/blog/myself/eas-build.md' },
+            { text: 'prisma速览', link: '/blog/myself/prisma/prisma.md' },
             {
 
               text: '算法与数据结构',
