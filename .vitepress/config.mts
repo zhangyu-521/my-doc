@@ -311,7 +311,9 @@ export default defineConfig({
                 { text: '集合', link: '/blog/myself/js-data/set.md' },
                 { text: '队列', link: '/blog/myself/js-data/queue.md' },
                 { text: '链表', link: '/blog/myself/js-data/linked-list.md' },
-                { text: '树', link: '/blog/myself/js-data/tree.md' }
+                { text: '树', link: '/blog/myself/js-data/tree.md' },
+                { text: '堆', link: '/blog/myself/js-data/heap.md' },
+                { text: '图', link: '/blog/myself/js-data/graph.md' },
               ]
             }
 
