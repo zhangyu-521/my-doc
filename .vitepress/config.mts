@@ -298,13 +298,22 @@ export default defineConfig({
             { text: 'react常用hook', link: '/blog/myself/react-native-hooks.md' },
             { text: 'vue中对节点的标记shapeFlag', link: '/blog/myself/vue/vueShapeFlag.md' },
             { text: 'Vue响应式数据实现原理', link: '/blog/myself/vue/vue-reactivity.md' },
-            { text: 'mcp基础', link: '/blog/myself/ai/mcp.md' },
-            { text: 'mcp进阶', link: '/blog/myself/ai/editMcpServer.md' },
-            { text: '万能提示词模板', link: '/blog/myself/ai/prompt.md' },
-            { text: 'eas build流程', link: '/blog/myself/eas-build.md' },
-            { text: 'prisma速览', link: '/blog/myself/prisma/prisma.md' },
+            // 新增 AI 分组，仿照“算法”结构
             {
-
+              text: 'AI 与 MCP 教程',
+              collapsed: true,
+              items: [
+                { text: 'MCP 基础', link: '/blog/myself/ai/mcp.md' },
+                { text: 'MCP 进阶：编写 Server', link: '/blog/myself/ai/editMcpServer.md' },
+                { text: '万能提示词模板', link: '/blog/myself/ai/prompt.md' },
+                { text: 'MCP协议基础概念与架构', link: '/blog/myself/ai/chapter-01/' },
+                { text: '实现Tools工具', link: '/blog/myself/ai/chapter-02/' },
+                { text: '资源管理Resources', link: '/blog/myself/ai/chapter-03/' },
+                { text: '综合实践与调试', link: '/blog/myself/ai/chapter-04/' }
+              ]
+            },
+            // 算法与数据结构保持不变
+            {
               text: '算法与数据结构',
               collapsed: true,
               items: [
@@ -316,13 +325,9 @@ export default defineConfig({
                 { text: '堆', link: '/blog/myself/js-data/heap.md' },
                 { text: '图', link: '/blog/myself/js-data/graph.md' },
               ]
-            }
-
-            // { text: 'JavaScript', link: '/blog/javascript/' },
-            // { text: '前端工程化', link: '/blog/frontend/' },
-            // { text: '后端开发', link: '/blog/backend/' },
-            // { text: '移动端开发', link: '/blog/mobile/' },
-            // { text: '桌面应用开发', link: '/blog/desktop/' },
+            },
+            { text: 'eas build流程', link: '/blog/myself/eas-build.md' },
+            { text: 'prisma速览', link: '/blog/myself/prisma/prisma.md' },
           ]
         }
       ],
