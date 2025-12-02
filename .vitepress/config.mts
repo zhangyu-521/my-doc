@@ -298,6 +298,7 @@ export default defineConfig({
             { text: 'react常用hook', link: '/blog/myself/react-native-hooks.md' },
             { text: 'vue中对节点的标记shapeFlag', link: '/blog/myself/vue/vueShapeFlag.md' },
             { text: 'Vue响应式数据实现原理', link: '/blog/myself/vue/vue-reactivity.md' },
+            { text: '一份自动化部署脚本', link: '/blog/myself/CICD/deploy.md' },
             // 新增 AI 分组，仿照“算法”结构
             {
               text: 'AI 与 MCP 教程',
