@@ -313,6 +313,14 @@ export default defineConfig({
                 { text: '综合实践与调试', link: '/blog/myself/ai/chapter-04/' }
               ]
             },
+            {
+              text: 'nuxt 4.3.1',
+              collapsed: true,
+              items: [
+                { text: '渲染模式', link: '/blog/myself/nuxt/render-modes.md' },
+                { text: '生命周期', link: '/blog/myself/nuxt/life-cycle.md' },
+              ]
+            },
             // 算法与数据结构保持不变
             {
               text: '算法与数据结构',
