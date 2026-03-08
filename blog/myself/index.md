@@ -2,6 +2,14 @@
 
 个人的开源项目和实践经验。
 
+## dialy_pwa
+
+- [dialy_pwa](https://github.com/zhangyu-521/dialy_pwa): 一个基于 PWA 技术的日常记录应用，支持离线使用、本地数据存储，提供便捷的日记记录体验。
+  - **PWA 支持**: 可安装为桌面/移动应用，离线可用
+  - **本地存储**: 数据保存在本地，保护隐私
+  - **简洁界面**: 清新简洁的用户界面
+  - **快速记录**: 随时随地快速记录日常
+
 ## anyig
 - [anyig](https://github.com/zhangyu-521/ig/blob/HEAD/README.zh-CN.md):  一个功能强大且可扩展的CLI工具，用于为各种开发工具和环境生成忽略文件。
   - 功能特性

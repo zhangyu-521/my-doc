@@ -317,6 +317,7 @@ export default defineConfig({
               text: 'nuxt 4.3.1',
               collapsed: true,
               items: [
+                { text: 'Nuxt速成', link: '/blog/myself/nuxt/quick-study.md' },
                 { text: '渲染模式', link: '/blog/myself/nuxt/render-modes.md' },
                 { text: '生命周期', link: '/blog/myself/nuxt/life-cycle.md' },
               ]
