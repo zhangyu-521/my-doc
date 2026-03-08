@@ -68,8 +68,8 @@ import { Pressable, Text } from 'react-native';
 
 // 将功能应用于自定义按钮
 <Link href="/settings" asChild>
-  <Pressable>
-    <Text>Settings</Text>
+  `<Pressable>`
+    `<Text>Settings</Text>`
   </Pressable>
 </Link>
 ```
@@ -132,7 +132,7 @@ export default function PostDetail() {
   const { slug } = useLocalSearchParams();
 
   return (
-    <Text>Post: {slug}</Text>
+    `<Text>Post: {slug}</Text>`
   );
 }
 ```
@@ -180,8 +180,8 @@ export default function AppLayout() {
         options={{
           title: 'Profile',
           headerRight: () => (
-            <Pressable>
-              <Text>Edit</Text>
+            `<Pressable>`
+              `<Text>Edit</Text>`
             </Pressable>
           ),
         }}
@@ -227,7 +227,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function TabRoutesLayout() {
   return (
-    <Tabs>
+    `<Tabs>`
       <Tabs.Screen
         name="home"
         options={{

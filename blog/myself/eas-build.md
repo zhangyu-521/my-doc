@@ -98,7 +98,7 @@ npx expo export:embed \
 
 ## 运行时
 
-把 JS 里的 <View>、<Text> 映射成真正的 android.view.View”不是在 Metro 打包时完成，也不是在 hermesc 编译字节码时完成，而是 APK 启动后、在设备上运行时由 React-Native 框架层逐步完成的。整个流程分三步：JS 创建虚拟节点 → C++ 生成指令 → Java 实例化原生 View。
+把 JS 里的 `<View>`、`<Text>` 映射成真正的 android.view.View”不是在 Metro 打包时完成，也不是在 hermesc 编译字节码时完成，而是 APK 启动后、在设备上运行时由 React-Native 框架层逐步完成的。整个流程分三步：JS 创建虚拟节点 → C++ 生成指令 → Java 实例化原生 View。
 
 ``` txt
 APK 启动

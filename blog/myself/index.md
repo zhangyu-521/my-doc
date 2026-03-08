@@ -2,104 +2,208 @@
 
 个人的开源项目和实践经验。
 
-## dialy_pwa
+<div class="project-grid">
 
-- [dialy_pwa](https://github.com/zhangyu-521/dialy_pwa): 一个基于 PWA 技术的日常记录应用，支持离线使用、本地数据存储，提供便捷的日记记录体验。
-  - **PWA 支持**: 可安装为桌面/移动应用，离线可用
-  - **本地存储**: 数据保存在本地，保护隐私
-  - **简洁界面**: 清新简洁的用户界面
-  - **快速记录**: 随时随地快速记录日常
+<!-- dialy_pwa -->
+<div class="project-card">
+  <div class="project-header">
+    <h3>dialy_pwa</h3>
+    <span class="project-tag">PWA</span>
+  </div>
+  <p class="project-desc">一个基于 PWA 技术的日常记录应用，支持离线使用、本地数据存储，提供便捷的日记记录体验。</p>
+  <div class="project-features">
+    <span class="feature">✅ 可安装为桌面/移动应用</span>
+    <span class="feature">✅ 离线可用</span>
+    <span class="feature">✅ 本地存储保护隐私</span>
+    <span class="feature">✅ 简洁界面</span>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/zhangyu-521/dialy_pwa" target="_blank">🔗 GitHub</a>
+  </div>
+</div>
 
-## anyig
-- [anyig](https://github.com/zhangyu-521/ig/blob/HEAD/README.zh-CN.md):  一个功能强大且可扩展的CLI工具，用于为各种开发工具和环境生成忽略文件。
-  - 功能特性
-    - 🎯 多种模板: 支持 Git、NPM、ESLint、Prettier、Docker 等多种忽略文件
-    - 🔧 框架支持: 为 React、Vue、Next.js、Python、Java 等提供专门的模板
-    - 📝 自定义模板: 支持定义你自己的忽略文件模板
-    - ⚙️ 配置文件: 通过 .anyigrc.json 进行灵活配置
-    - 🔄 自动备份: 自动备份现有文件，防止意外覆盖
-    - 📦 批量生成: 一次生成多个忽略文件
-    - 🎨 交互式界面: 美观直观的命令行交互界面
-    - 🧪 完整测试: 全面的测试覆盖，确保代码质量
+<!-- anyig -->
+<div class="project-card">
+  <div class="project-header">
+    <h3>anyig</h3>
+    <span class="project-tag">CLI</span>
+  </div>
+  <p class="project-desc">一个功能强大且可扩展的 CLI 工具，用于为各种开发工具和环境生成忽略文件。</p>
+  <div class="project-features">
+    <span class="feature">🎯 多种模板: Git、NPM、ESLint、Prettier、Docker</span>
+    <span class="feature">🔧 框架支持: React、Vue、Next.js、Python、Java</span>
+    <span class="feature">📝 自定义模板</span>
+    <span class="feature">⚙️ 配置文件支持</span>
+    <span class="feature">🔄 自动备份</span>
+    <span class="feature">📦 批量生成</span>
+    <span class="feature">🎨 交互式界面</span>
+    <span class="feature">🧪 完整测试</span>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/zhangyu-521/ig/blob/HEAD/README.zh-CN.md" target="_blank">🔗 GitHub</a>
+  </div>
+</div>
 
+<!-- electron-todoList -->
+<div class="project-card">
+  <div class="project-header">
+    <h3>electron-todoList</h3>
+    <span class="project-tag">Electron</span>
+    <span class="project-tag">Vue3</span>
+  </div>
+  <p class="project-desc">一个优美精致的桌面便签式 TodoList 应用，基于 Electron + Vue 3 + TypeScript 开发。</p>
+  <div class="project-features">
+    <span class="feature">✨ 毛玻璃效果设计</span>
+    <span class="feature">🎨 明暗主题切换</span>
+    <span class="feature">📌 桌面置顶</span>
+    <span class="feature">🖱️ 自由拖拽</span>
+    <span class="feature">📝 任务管理</span>
+    <span class="feature">🔍 实时搜索</span>
+    <span class="feature">⌨️ 快捷键支持</span>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/zhangyu-521/electron-todoList" target="_blank">🔗 GitHub</a>
+    <a href="https://github.com/zhangyu-521/electron-todoList/releases/tag/releases" target="_blank">⬇️ 下载</a>
+  </div>
+</div>
 
-## electron-todoList
-- [桌面便签 TodoList](https://github.com/zhangyu-521/electron-todoList): 一个优美精致的桌面便签式 TodoList 应用，基于 Electron + Vue 3 + TypeScript 开发。
-   - [下载链接](https://github.com/zhangyu-521/electron-todoList/releases/tag/releases)
-### ✨ 精美界面
+<!-- file_upload -->
+<div class="project-card">
+  <div class="project-header">
+    <h3>大文件分片上传</h3>
+    <span class="project-tag">React</span>
+    <span class="project-tag">Node.js</span>
+  </div>
+  <p class="project-desc">基于 React 和 Node.js 的大文件分片上传示例项目。</p>
+  <div class="project-features">
+    <span class="feature">📤 大文件分片上传</span>
+    <span class="feature">🔄 断点续传</span>
+    <span class="feature">⚡ 并发上传</span>
+    <span class="feature">📊 上传进度条</span>
+    <span class="feature">⏸️ 暂停/取消上传</span>
+    <span class="feature">🚀 文件秒传</span>
+    <span class="feature">✅ 文件校验</span>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/zhangyu-521/file_upload" target="_blank">🔗 GitHub</a>
+  </div>
+</div>
 
-- **现代化设计**: 毛玻璃效果设计，视觉效果出众
-- **渐变背景**: 精美的渐变背景和阴影效果
-- **流畅动画**: 丝滑的动画过渡体验
-- **主题切换**: 支持明暗主题自由切换
+<!-- electron-camera -->
+<div class="project-card">
+  <div class="project-header">
+    <h3>electron-camera</h3>
+    <span class="project-tag">Electron</span>
+    <span class="project-tag">Vue</span>
+  </div>
+  <p class="project-desc">基于 Electron + Vue + TypeScript 开发的摄像头悬浮窗口应用，支持实时摄像头预览、滤镜效果和自定义窗口样式。</p>
+  <div class="project-features">
+    <span class="feature">🎥 实时摄像头预览</span>
+    <span class="feature">🔮 滤镜效果</span>
+    <span class="feature">⌨️ 自定义快捷键</span>
+    <span class="feature">🪟 悬浮窗口</span>
+    <span class="feature">⚙️ 自定义设置</span>
+    <span class="feature">💾 配置保存</span>
+    <span class="feature">📌 系统托盘</span>
+    <span class="feature">🎯 圆形显示</span>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/zhangyu-521/electron-camera" target="_blank">🔗 GitHub</a>
+    <a href="https://github.com/zhangyu-521/electron-camera/releases" target="_blank">⬇️ 下载</a>
+  </div>
+</div>
 
-### 📌 便签特性
+</div>
 
-- **无边框设计**: 简洁的无边框窗口
-- **桌面置顶**: 可固定在桌面最前端显示
-- **自由拖拽**: 支持窗口拖拽移动
-- **透明度调节**: 可调节窗口透明度
-- **右键菜单**: 快速操作菜单
+<style>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
 
-### 📝 TodoList 功能
+.project-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
 
-- **任务管理**: 添加、编辑、删除任务
-- **状态标记**: 标记任务完成状态
-- **双击编辑**: 双击任务内容快速编辑
-- **状态过滤**: 支持全部/待办/已完成状态过滤
-- **实时搜索**: 实时搜索过滤任务
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--vp-c-brand);
+}
 
-### 🚀 增强功能
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
 
-- **拖拽排序**: 拖拽任务重新排序
-- **快捷键**: 丰富的键盘快捷键支持
-- **数据持久化**: 本地数据持久化存储
-- **任务统计**: 实时任务统计显示
+.project-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--vp-c-brand);
+}
 
-### ⌨️ 快捷键
+.project-tag {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
 
-| 快捷键         | 功能                 |
-| -------------- | -------------------- |
-| `Ctrl/Cmd + N` | 聚焦到输入框         |
-| `Ctrl/Cmd + T` | 切换窗口置顶         |
-| `Ctrl/Cmd + M` | 最小化窗口           |
-| `Esc`          | 取消编辑状态         |
-| `Enter`        | 添加新任务或确认编辑 |
-| `双击任务`     | 编辑任务内容         |
+.project-desc {
+  color: var(--vp-c-text-2);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
 
+.project-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
 
+.feature {
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--vp-c-text-1);
+}
 
+.project-links {
+  display: flex;
+  gap: 12px;
+}
 
-## react和nodejs实现大文件分片上传
+.project-links a {
+  color: var(--vp-c-brand);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
 
-- [react 和 nodejs 实现大文件分片上传](https://github.com/zhangyu-521/file_upload): 一个基于 React 和 Node.js 的大文件分片上传示例项目。
-### 功能
-- [√] 大文件分片上传
-- [√] 断点续传
-- [√] 并发上传
-- [√] 上传进度条
-- [√] 暂停上传
-- [√] 取消上传
-- [√] 重试上传
-- [√] 文件秒传
-- [√] 文件校验
+.project-links a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
 
-
-## electron-camera
-
--  [electron-camera](https://github.com/zhangyu-521/electron-camera)一个基于 Electron + Vue + TypeScript 开发的摄像头悬浮窗口应用，支持实时摄像头预览、滤镜效果和自定义窗口样式。
--  [下载链接](https://github.com/zhangyu-521/electron-camera/releases)
-
-### 功能
-- **🎥 实时摄像头预览** - 显示电脑摄像头的实时视频流
-- **🔮 滤镜效果** - 支持一键模糊/取消模糊摄像头画面
-- **⌨️ 自定义快捷键** - 可配置快捷键快速切换滤镜效果
-- **🪟 悬浮窗口** - 透明无边框窗口，可置顶显示
-- **⚙️ 自定义设置** - 支持多种窗口样式调整：
-  - 窗口透明度调节 (1-100%)
-  - 窗口圆角大小调节 (1-100%)
-  - 窗口大小调节 (1-100%)
-  - 始终置顶开关
-- **💾 配置保存** - 自动保存用户设置，重启应用后恢复
-- **📌 系统托盘** - 最小化到系统托盘，方便快速访问
-- **🎯 圆形显示** - 默认圆形摄像头预览，美观简洁
+@media (max-width: 640px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

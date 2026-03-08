@@ -390,8 +390,8 @@ export default defineConfig({
     },
     // 配置Markdown以纯Markdown语法处理，避免JavaScript表达式解析错误
     config: (md) => {
-      // 禁用Vue组件处理，保持纯Markdown语法
-      md.options.html = false;
+      // 启用HTML以支持自定义卡片布局
+      md.options.html = true;
     }
 
   },
