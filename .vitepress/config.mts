@@ -301,9 +301,11 @@ export default defineConfig({
             { text: '一份自动化部署脚本', link: '/blog/myself/CICD/deploy.md' },
             // 新增 AI 分组，仿照“算法”结构
             {
-              text: 'AI 与 MCP 教程',
+              text: '前端角度的AI',
               collapsed: true,
               items: [
+                { text: 'SSE', link: '/blog/myself/ai/SSE.md' },
+                { text: '动态提示词', link: '/blog/myself/ai/change-prompt.md' },
                 { text: 'MCP 基础', link: '/blog/myself/ai/mcp.md' },
                 { text: 'MCP 进阶：编写 Server', link: '/blog/myself/ai/editMcpServer.md' },
                 { text: '万能提示词模板', link: '/blog/myself/ai/prompt.md' },
