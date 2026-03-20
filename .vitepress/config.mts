@@ -308,6 +308,7 @@ export default defineConfig({
                 { text: '动态提示词', link: '/blog/myself/ai/change-prompt.md' },
                 { text: 'MCP 基础', link: '/blog/myself/ai/mcp.md' },
                 { text: 'MCP 进阶：编写 Server', link: '/blog/myself/ai/editMcpServer.md' },
+                { text: 'MCP Skills 与团队共享', link: '/blog/myself/ai/mcp-skills-team.md' },
                 { text: '万能提示词模板', link: '/blog/myself/ai/prompt.md' },
                 { text: 'MCP协议基础概念与架构', link: '/blog/myself/ai/chapter-01/' },
                 { text: '实现Tools工具', link: '/blog/myself/ai/chapter-02/' },
