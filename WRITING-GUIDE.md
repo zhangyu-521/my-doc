@@ -128,16 +128,19 @@ VitePress 提示框类型及使用场景：
 - 示意图
 
 ### 示例
+``` md
 <img src="../../../public/mcp.png">
+
 
 或者
 
 ![描述文字](../../../public/xxx.png)
 
+```
 
 ## 7. 链接格式
 
-- [链接文字](URL) - 普通链接
+- `[链接文字](URL)` - 普通链接格式
 - [菜鸟MCP](https://www.runoob.com/np/mcp-protocol.html) - 引用来源
 - [mcpmarket](https://mcpmarket.com/zh) - 工具推荐
 
