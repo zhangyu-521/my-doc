@@ -68,3 +68,6 @@ node monitor-build.js
 ## 自定义组件
 
 "我的开源项目"页面 (`blog/myself/index.md`) 使用自定义 HTML/CSS 卡片，通过 `.vitepress/theme/style.css` 设置样式，并采用响应式网格布局。
+
+## 编写规范
+请参考 WRITING-GUIDE.md 文件
