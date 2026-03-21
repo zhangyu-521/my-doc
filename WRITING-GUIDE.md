@@ -6,7 +6,6 @@
 
 ### 标准结构模板
 
-```markdown
 # 标题
 
 ## 什么是 xxx？
@@ -27,7 +26,7 @@
 ::: tip
 重要提示或建议。
 :::
-```
+
 
 ### 章节层级
 - `#` - 文档主标题（只能有一个）
@@ -44,13 +43,12 @@
 - **中文为主**：面向中文读者，技术术语可保留英文
 
 ### 示例
-```markdown
 ✅ 简单来说，MCP 让大模型能够安全、可控地调用外部工具。
 ❌ MCP（Model Context Protocol）是一种开放协议，它通过标准化模型与外部资源的交互方式...
 
 ✅ 下载 vscode 插件 Cline
 ❌ 请前往 Visual Studio Code 应用商店下载并安装名为 Cline 的扩展程序
-```
+
 
 ## 3. 格式规范
 
@@ -69,10 +67,8 @@
 - 有序列表（`1.`）：用于步骤说明
 - 列表项内可用 **加粗** 突出关键词
 
-```markdown
 - **标准化集成**：统一接口连接各种服务
 - **功能扩展**：赋予实时数据访问能力
-```
 
 ## 4. 代码规范
 
@@ -81,7 +77,6 @@
 - 代码前简要说明其功能
 - 关键行可添加注释
 
-```markdown
 前端调用示例：
 ```js
 const response = await fetch(endpoint, {
@@ -89,7 +84,6 @@ const response = await fetch(endpoint, {
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ message: '你好' })
 });
-```
 ```
 
 ### 行内代码
@@ -100,7 +94,6 @@ const response = await fetch(endpoint, {
 
 VitePress 提示框类型及使用场景：
 
-```markdown
 ::: tip
 提示信息 - 补充说明、小技巧、优化建议
 :::
@@ -116,7 +109,7 @@ VitePress 提示框类型及使用场景：
 ::: note
 备注信息 - 额外的背景知识
 :::
-```
+
 
 ### 使用原则
 - `tip` 最常用，用于强调重点
@@ -135,27 +128,23 @@ VitePress 提示框类型及使用场景：
 - 示意图
 
 ### 示例
-```markdown
 <img src="../../../public/mcp.png">
 
 或者
 
 ![描述文字](../../../public/xxx.png)
-```
+
 
 ## 7. 链接格式
 
-```markdown
 - [链接文字](URL) - 普通链接
 - [菜鸟MCP](https://www.runoob.com/np/mcp-protocol.html) - 引用来源
 - [mcpmarket](https://mcpmarket.com/zh) - 工具推荐
-```
 
 ## 8. 完整示例文档
 
 参考以下模板创建新文档：
 
-```markdown
 # 文档标题
 
 ## 什么是 xxx？
@@ -195,7 +184,7 @@ const result = await api.call();
 
 - [官方文档](https://example.com)
 - [工具推荐](https://example.com/tool)
-```
+
 
 ## 9. 目录组织
 
