@@ -5,7 +5,7 @@
 ``` js
 import nunjucks from "nunjucks";
 const today = ref(new Date().toISOString().split("T")[0]);
-const systemPrompt = `
+const systemPrompt = ` 
 今天的日期是 {{today}}
 
 针对今天的日期、节日、节气等信息，整理出以下内容：
