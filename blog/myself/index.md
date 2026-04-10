@@ -8,47 +8,27 @@ aside: false
 
 <div class="project-grid">
 
-<!-- dialy_pwa -->
+<!-- nuxt-knowledge-agent - AI 项目，技术栈最新 -->
 <div class="project-card">
   <div class="project-header">
-    <h3>dialy_pwa</h3>
-    <span class="project-tag">PWA</span>
+    <h3>nuxt-knowledge-agent</h3>
+    <span class="project-tag">Nuxt</span>
+    <span class="project-tag">AI</span>
   </div>
-  <p class="project-desc">一个基于 PWA 技术的日常记录应用，支持离线使用、本地数据存储，提供便捷的日记记录体验。</p>
+  <p class="project-desc">基于 Nuxt 3 的智能知识库代理应用，支持文档管理、AI 问答和知识检索。</p>
   <div class="project-features">
-    <span class="feature">✅ 可安装为桌面/移动应用</span>
-    <span class="feature">✅ 离线可用</span>
-    <span class="feature">✅ 本地存储保护隐私</span>
-    <span class="feature">✅ 简洁界面</span>
+    <span class="feature">📚 知识库管理</span>
+    <span class="feature">🤖 AI 智能问答</span>
+    <span class="feature">🔍 文档检索</span>
+    <span class="feature">⚡ Nuxt 3 全栈开发</span>
+    <span class="feature">🎨 现代化界面</span>
   </div>
   <div class="project-links">
-    <a href="https://github.com/zhangyu-521/dialy_pwa" target="_blank">🔗 GitHub</a>
+    <a href="https://github.com/zhangyu-521/nuxt-knowledge-agent" target="_blank">🔗 GitHub</a>
   </div>
 </div>
 
-<!-- anyig -->
-<div class="project-card">
-  <div class="project-header">
-    <h3>anyig</h3>
-    <span class="project-tag">CLI</span>
-  </div>
-  <p class="project-desc">一个功能强大且可扩展的 CLI 工具，用于为各种开发工具和环境生成忽略文件。</p>
-  <div class="project-features">
-    <span class="feature">🎯 多种模板: Git、NPM、ESLint、Prettier、Docker</span>
-    <span class="feature">🔧 框架支持: React、Vue、Next.js、Python、Java</span>
-    <span class="feature">📝 自定义模板</span>
-    <span class="feature">⚙️ 配置文件支持</span>
-    <span class="feature">🔄 自动备份</span>
-    <span class="feature">📦 批量生成</span>
-    <span class="feature">🎨 交互式界面</span>
-    <span class="feature">🧪 完整测试</span>
-  </div>
-  <div class="project-links">
-    <a href="https://github.com/zhangyu-521/ig/blob/HEAD/README.zh-CN.md" target="_blank">🔗 GitHub</a>
-  </div>
-</div>
-
-<!-- electron-todoList -->
+<!-- electron-todoList - 功能丰富的桌面应用 -->
 <div class="project-card">
   <div class="project-header">
     <h3>electron-todoList</h3>
@@ -71,14 +51,14 @@ aside: false
   </div>
 </div>
 
-<!-- file_upload -->
+<!-- file_upload - 技术难度高 -->
 <div class="project-card">
   <div class="project-header">
     <h3>大文件分片上传</h3>
     <span class="project-tag">React</span>
     <span class="project-tag">Node.js</span>
   </div>
-  <p class="project-desc">基于 React 和 Node.js 的大文件分片上传示例项目。</p>
+  <p class="project-desc">基于 React 和 Node.js 的大文件分片上传示例项目，实现了完整的分片上传解决方案。</p>
   <div class="project-features">
     <span class="feature">📤 大文件分片上传</span>
     <span class="feature">🔄 断点续传</span>
@@ -93,7 +73,29 @@ aside: false
   </div>
 </div>
 
-<!-- electron-camera -->
+<!-- anyig - 功能齐全的 CLI 工具 -->
+<div class="project-card">
+  <div class="project-header">
+    <h3>anyig</h3>
+    <span class="project-tag">CLI</span>
+  </div>
+  <p class="project-desc">一个功能强大且可扩展的 CLI 工具，用于为各种开发工具和环境生成忽略文件。</p>
+  <div class="project-features">
+    <span class="feature">🎯 多种模板: Git、NPM、ESLint、Prettier、Docker</span>
+    <span class="feature">🔧 框架支持: React、Vue、Next.js、Python、Java</span>
+    <span class="feature">📝 自定义模板</span>
+    <span class="feature">⚙️ 配置文件支持</span>
+    <span class="feature">🔄 自动备份</span>
+    <span class="feature">📦 批量生成</span>
+    <span class="feature">🎨 交互式界面</span>
+    <span class="feature">🧪 完整测试</span>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/zhangyu-521/ig/blob/HEAD/README.zh-CN.md" target="_blank">🔗 GitHub</a>
+  </div>
+</div>
+
+<!-- electron-camera - 创意桌面工具 -->
 <div class="project-card">
   <div class="project-header">
     <h3>electron-camera</h3>
@@ -114,6 +116,24 @@ aside: false
   <div class="project-links">
     <a href="https://github.com/zhangyu-521/electron-camera" target="_blank">🔗 GitHub</a>
     <a href="https://github.com/zhangyu-521/electron-camera/releases" target="_blank">⬇️ 下载</a>
+  </div>
+</div>
+
+<!-- dialy_pwa - 入门级项目 -->
+<div class="project-card">
+  <div class="project-header">
+    <h3>dialy_pwa</h3>
+    <span class="project-tag">PWA</span>
+  </div>
+  <p class="project-desc">一个基于 PWA 技术的日常记录应用，支持离线使用、本地数据存储，提供便捷的日记记录体验。</p>
+  <div class="project-features">
+    <span class="feature">✅ 可安装为桌面/移动应用</span>
+    <span class="feature">✅ 离线可用</span>
+    <span class="feature">✅ 本地存储保护隐私</span>
+    <span class="feature">✅ 简洁界面</span>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/zhangyu-521/dialy_pwa" target="_blank">🔗 GitHub</a>
   </div>
 </div>
 
