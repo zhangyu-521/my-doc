@@ -326,6 +326,13 @@ export default defineConfig({
                 { text: '生命周期', link: '/blog/myself/nuxt/life-cycle.md' },
               ]
             },
+            {
+              text: '小程序',
+              collapsed: true,
+              items: [
+                { text: '小程序自动化发布流水线', link: '/blog/myself/miniprogram/release-pipeline.md' },
+              ]
+            },
             // 算法与数据结构保持不变
             {
               text: '算法与数据结构',
