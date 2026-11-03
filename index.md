@@ -45,4 +45,9 @@ features:
     link: /blog/desktop/
     icon: 🖥️
     linkText: 开始学习
+  - title: Python Agent
+    details: 使用Python构建AI Agent的系列教程，从核心概念到完整实战
+    link: /blog/python/agent/
+    icon: 🐍
+    linkText: 开始学习
 ---

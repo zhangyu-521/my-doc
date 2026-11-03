@@ -44,6 +44,7 @@ export default defineConfig({
         items: [
           { text: 'NestJS 实战', link: '/blog/backend/nestjs/' },
           { text: 'Node.js 进阶', link: '/blog/backend/nodejs/chapter-01' },
+          { text: 'Python 全栈开发', link: '/blog/backend/python-fullstack/' },
         ]
       },
       {
@@ -56,6 +57,12 @@ export default defineConfig({
         text: '桌面应用',
         items: [
           { text: 'Electron 实战', link: '/blog/desktop/electron/' },
+        ]
+      },
+      {
+        text: 'Python',
+        items: [
+          { text: 'Python 基础', link: '/blog/python/basics/data-types.md' },
         ]
       },
       // {
@@ -145,6 +152,22 @@ export default defineConfig({
             { text: '第7章：数据库集成', link: '/blog/backend/nodejs/chapter-07/' },
             { text: '第8章：安全与最佳实践', link: '/blog/backend/nodejs/chapter-08/' },
             { text: '第9章：部署与运维', link: '/blog/backend/nodejs/chapter-09/' },
+          ]
+        }
+      ],
+
+      // Python 全栈开发教程
+      '/blog/backend/python-fullstack/': [
+        {
+          text: 'Python 全栈开发 - 前端工程师转型指南',
+          collapsed: false,
+          items: [
+            { text: '教程概览', link: '/blog/backend/python-fullstack/' },
+            { text: '第1章：Python vs JavaScript 核心差异', link: '/blog/backend/python-fullstack/chapter-01/' },
+            { text: '第2章：FastAPI 快速上手', link: '/blog/backend/python-fullstack/chapter-02/' },
+            { text: '第3章：第一个 API 项目实战', link: '/blog/backend/python-fullstack/chapter-03/' },
+            { text: '第4章：SQLAlchemy ORM 与数据库设计', link: '/blog/backend/python-fullstack/chapter-04/' },
+            { text: '第5章：异步编程与性能优化', link: '/blog/backend/python-fullstack/chapter-05/' },
           ]
         }
       ],
@@ -243,6 +266,7 @@ export default defineConfig({
             { text: '后端概览', link: '/blog/backend/' },
             { text: 'NestJS 实战', link: '/blog/backend/nestjs/' },
             { text: 'Node.js 进阶', link: '/blog/backend/nodejs/' },
+            { text: 'Python 全栈开发', link: '/blog/backend/python-fullstack/' },
           ]
         }
       ],
@@ -267,6 +291,28 @@ export default defineConfig({
           items: [
             { text: '桌面应用概览', link: '/blog/desktop/' },
             { text: 'Electron 实战', link: '/blog/desktop/electron/' },
+          ]
+        }
+      ],
+
+      // Python 系列
+      '/blog/python/': [
+        {
+          text: 'Python 系列',
+          collapsed: false,
+          items: [
+            {
+              text: 'Python 基础',
+              collapsed: true,
+              items: [
+                { text: '数据类型', link: '/blog/python/basics/data-types.md' },
+                { text: '流程控制', link: '/blog/python/basics/control-flow.md' },
+                { text: '函数', link: '/blog/python/basics/functions.md' },
+                { text: '模块与包', link: '/blog/python/basics/modules.md' },
+                { text: '面向对象', link: '/blog/python/basics/oop.md' },
+                { text: '虚拟环境', link: '/blog/python/basics/venv.md' },
+              ]
+            },
           ]
         }
       ],
