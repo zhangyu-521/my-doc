@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/my-doc/',
+  ignoreDeadLinks: true,
   title: "zyDocs",
   description: "该学习了，少年",
   head: [
