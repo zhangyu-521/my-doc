@@ -1,330 +1,112 @@
-# 第4章：SQLAlchemy ORM 与数据库设计
+# 第4章：书签标签系统（多对多关系实战）
 
-## 回顾与展望
+## 用户需求
 
-在第 3 章中，我们已经用到了 SQLAlchemy 的基础功能。这一章会深入讲解：
-- ORM 的工作原理
-- 数据库关系设计
-- 复杂查询
-- 数据库迁移
+在第 3 章，我们实现了基础的书签 CRUD 功能。现在用户反馈：
+
+> "我的书签越来越多了，能不能加个标签功能，方便分类管理？"
+
+这一章我们要做的：
+- ✅ 为书签添加标签功能
+- ✅ 实现标签管理 API
+- ✅ 按标签筛选书签
+- ✅ 学习多对多关系设计
 
 ::: tip
-如果你用过 TypeORM 或 Prisma，会发现 SQLAlchemy 的概念很相似。
+这是一个真实的功能迭代场景，你会学到如何在现有项目上添加新功能。
 :::
 
-## SQLAlchemy 核心概念
+## 回顾：当前的数据库设计
 
-### 对比前端的 ORM
-
-| 前端 ORM | SQLAlchemy | 说明 |
-|----------|-----------|------|
-| TypeORM Entity | Model (继承 Base) | 数据库表映射 |
-| `@Column()` | `Column()` | 字段定义 |
-| `@OneToMany()` | `relationship()` | 关系定义 |
-| `@ManyToOne()` | `ForeignKey()` | 外键 |
-| Repository | Session | 数据库操作 |
-
-## 数据库关系详解
-
-### 1. 一对多关系（One-to-Many）
-
-**场景**：一个用户有多个书签
+在第 3 章，我们有两个表：
 
 ```python
-from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
-from database import Base
-
 class User(Base):
     __tablename__ = "users"
     
-    id = Column(Integer, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True)
+    email = Column(String, unique=True)
     username = Column(String, unique=True)
-    
-    # 关系：一个用户有多个书签
-    bookmarks = relationship("Bookmark", back_populates="owner", cascade="all, delete-orphan")
+    hashed_password = Column(String)
 
 class Bookmark(Base):
     __tablename__ = "bookmarks"
     
-    id = Column(Integer, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True)
     title = Column(String)
     url = Column(String)
-    
-    # 外键：指向 users 表的 id
+    description = Column(String)
     user_id = Column(Integer, ForeignKey("users.id"))
     
-    # 关系：反向引用
     owner = relationship("User", back_populates="bookmarks")
 ```
 
-**使用示例**：
-```python
-# 获取用户的所有书签
-user = db.query(User).filter(User.id == 1).first()
-print(user.bookmarks)  # 自动加载所有书签
+**当前关系**：User → Bookmarks（一对多）
 
-# 获取书签的所有者
-bookmark = db.query(Bookmark).filter(Bookmark.id == 1).first()
-print(bookmark.owner.username)  # 自动加载用户
-```
+---
 
-**对比 TypeORM**：
+## 新需求：添加标签功能
+
+### 1. 理解多对多关系
+
+**场景分析**：
+- 一个书签可以有多个标签（如："Python"、"教程"、"后端"）
+- 一个标签可以属于多个书签（"Python"标签可以打在很多书签上）
+
+**对比前端的多对多**：
+
+如果你用过 TypeORM，应该见过这样的代码：
+
 ```typescript
 @Entity()
-class User {
-  @PrimaryGeneratedColumn()
-  id: number;
-
-  @OneToMany(() => Bookmark, bookmark => bookmark.owner)
-  bookmarks: Bookmark[];
+class Bookmark {
+  @ManyToMany(() => Tag)
+  @JoinTable()
+  tags: Tag[];
 }
 
 @Entity()
-class Bookmark {
-  @PrimaryGeneratedColumn()
-  id: number;
-
-  @ManyToOne(() => User, user => user.bookmarks)
-  owner: User;
+class Tag {
+  @ManyToMany(() => Bookmark, bookmark => bookmark.tags)
+  bookmarks: Bookmark[];
 }
 ```
 
-### 2. 多对多关系（Many-to-Many）
+在 SQLAlchemy 中，我们需要手动创建**关联表**：
 
-**场景**：书签可以有多个标签，标签可以属于多个书签
+### 2. 设计数据库表结构
+
+### 2. 设计数据库表结构
+
+我们需要三个表：
+
+```
+users 表          bookmarks 表          tags 表
+┌────────┐       ┌────────────┐        ┌──────────┐
+│ id     │       │ id         │        │ id       │
+│ email  │       │ title      │        │ name     │
+│ ...    │       │ url        │        │ ...      │
+└────────┘       │ user_id    │        └──────────┘
+                 └────────────┘
+                        ↕
+                 bookmark_tags 表（关联表）
+                 ┌──────────────────┐
+                 │ bookmark_id      │
+                 │ tag_id           │
+                 └──────────────────┘
+```
+
+### 3. 更新数据模型
+
+打开 `app/models.py`，添加标签功能：
 
 ```python
-from sqlalchemy import Table, Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
-from database import Base
-
-# 关联表（中间表）
-bookmark_tags = Table(
-    'bookmark_tags',
-    Base.metadata,
-    Column('bookmark_id', Integer, ForeignKey('bookmarks.id')),
-    Column('tag_id', Integer, ForeignKey('tags.id'))
-)
-
-class Bookmark(Base):
-    __tablename__ = "bookmarks"
-    
-    id = Column(Integer, primary_key=True)
-    title = Column(String)
-    
-    # 多对多关系
-    tags = relationship("Tag", secondary=bookmark_tags, back_populates="bookmarks")
-
-class Tag(Base):
-    __tablename__ = "tags"
-    
-    id = Column(Integer, primary_key=True)
-    name = Column(String, unique=True)
-    
-    # 反向关系
-    bookmarks = relationship("Bookmark", secondary=bookmark_tags, back_populates="tags")
-```
-
-**使用示例**：
-```python
-# 创建标签
-tag1 = Tag(name="Python")
-tag2 = Tag(name="Tutorial")
-
-# 创建书签并关联标签
-bookmark = Bookmark(title="FastAPI Docs")
-bookmark.tags.append(tag1)
-bookmark.tags.append(tag2)
-
-db.add(bookmark)
-db.commit()
-
-# 查询：获取所有包含 "Python" 标签的书签
-python_bookmarks = db.query(Bookmark)\
-    .join(Bookmark.tags)\
-    .filter(Tag.name == "Python")\
-    .all()
-```
-
-### 3. 级联操作（Cascade）
-
-```python
-class User(Base):
-    __tablename__ = "users"
-    
-    id = Column(Integer, primary_key=True)
-    username = Column(String)
-    
-    # cascade="all, delete-orphan"：删除用户时自动删除其书签
-    bookmarks = relationship(
-        "Bookmark",
-        back_populates="owner",
-        cascade="all, delete-orphan"  # 重点！
-    )
-```
-
-级联选项：
-- `all` - 包含所有级联操作
-- `delete` - 删除父对象时删除子对象
-- `delete-orphan` - 删除失去父对象的子对象
-- `merge` - 合并父对象时合并子对象
-- `save-update` - 保存父对象时保存子对象
-
-## 复杂查询
-
-### 1. 连接查询（Join）
-
-```python
-from sqlalchemy import func
-
-# 查询每个用户的书签数量
-results = db.query(
-    User.username,
-    func.count(Bookmark.id).label('bookmark_count')
-)\
-.join(Bookmark, User.id == Bookmark.user_id)\
-.group_by(User.username)\
-.all()
-
-for username, count in results:
-    print(f"{username}: {count} bookmarks")
-```
-
-### 2. 过滤与排序
-
-```python
-# 多条件查询
-bookmarks = db.query(Bookmark)\
-    .filter(
-        Bookmark.user_id == user_id,
-        Bookmark.title.contains("FastAPI")  # 模糊搜索
-    )\
-    .order_by(Bookmark.created_at.desc())\
-    .limit(10)\
-    .all()
-
-# OR 查询
-from sqlalchemy import or_
-
-bookmarks = db.query(Bookmark)\
-    .filter(
-        or_(
-            Bookmark.title.contains("Python"),
-            Bookmark.description.contains("Python")
-        )
-    )\
-    .all()
-```
-
-### 3. 分页查询
-
-```python
-def get_bookmarks_paginated(
-    db: Session,
-    user_id: int,
-    page: int = 1,
-    page_size: int = 20
-):
-    skip = (page - 1) * page_size
-    
-    bookmarks = db.query(Bookmark)\
-        .filter(Bookmark.user_id == user_id)\
-        .offset(skip)\
-        .limit(page_size)\
-        .all()
-    
-    total = db.query(Bookmark)\
-        .filter(Bookmark.user_id == user_id)\
-        .count()
-    
-    return {
-        "items": bookmarks,
-        "total": total,
-        "page": page,
-        "page_size": page_size,
-        "pages": (total + page_size - 1) // page_size
-    }
-```
-
-## 数据库迁移（Alembic）
-
-### 为什么需要迁移？
-
-在开发过程中，数据库结构会变化（添加字段、修改类型等）。**Alembic** 类似前端的数据库迁移工具。
-
-### 安装与初始化
-
-```bash
-pip install alembic
-alembic init alembic
-```
-
-### 配置 Alembic
-
-编辑 `alembic.ini`：
-```ini
-# 修改数据库连接
-sqlalchemy.url = sqlite:///./bookmark.db
-```
-
-编辑 `alembic/env.py`：
-```python
-from app.database import Base
-from app.models import User, Bookmark  # 导入所有模型
-
-target_metadata = Base.metadata
-```
-
-### 创建迁移
-
-```bash
-# 自动生成迁移脚本
-alembic revision --autogenerate -m "Add tags table"
-
-# 执行迁移
-alembic upgrade head
-
-# 回滚迁移
-alembic downgrade -1
-```
-
-### 示例：添加新字段
-
-假设我们要给 `Bookmark` 添加 `is_public` 字段：
-
-1. **修改模型**：
-```python
-class Bookmark(Base):
-    __tablename__ = "bookmarks"
-    
-    id = Column(Integer, primary_key=True)
-    title = Column(String)
-    url = Column(String)
-    is_public = Column(Boolean, default=False)  # 新字段
-```
-
-2. **生成迁移**：
-```bash
-alembic revision --autogenerate -m "Add is_public to bookmarks"
-```
-
-3. **执行迁移**：
-```bash
-alembic upgrade head
-```
-
-## 完整示例：带标签的书签系统
-
-更新 `app/models.py`：
-
-```python
-from sqlalchemy import Table, Column, Integer, String, Boolean, ForeignKey, DateTime
+from sqlalchemy import Table, Column, Integer, String, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 from datetime import datetime
 from app.database import Base
 
-# 关联表
+# ====== 新增：关联表 ======
 bookmark_tags = Table(
     'bookmark_tags',
     Base.metadata,
@@ -332,6 +114,7 @@ bookmark_tags = Table(
     Column('tag_id', Integer, ForeignKey('tags.id', ondelete='CASCADE'))
 )
 
+# ====== 原有：用户表 ======
 class User(Base):
     __tablename__ = "users"
     
@@ -343,6 +126,7 @@ class User(Base):
     
     bookmarks = relationship("Bookmark", back_populates="owner", cascade="all, delete-orphan")
 
+# ====== 更新：书签表（添加标签关系）======
 class Bookmark(Base):
     __tablename__ = "bookmarks"
     
@@ -350,24 +134,84 @@ class Bookmark(Base):
     title = Column(String, nullable=False)
     url = Column(String, nullable=False)
     description = Column(String)
-    is_public = Column(Boolean, default=False)
     created_at = Column(DateTime, default=datetime.utcnow)
     
     user_id = Column(Integer, ForeignKey("users.id"))
     
     owner = relationship("User", back_populates="bookmarks")
-    tags = relationship("Tag", secondary=bookmark_tags, back_populates="bookmarks")
+    tags = relationship("Tag", secondary=bookmark_tags, back_populates="bookmarks")  # 新增
 
+# ====== 新增：标签表 ======
 class Tag(Base):
     __tablename__ = "tags"
     
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, unique=True, nullable=False)
+    name = Column(String, unique=True, nullable=False, index=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
     
     bookmarks = relationship("Bookmark", secondary=bookmark_tags, back_populates="tags")
 ```
 
-更新 `app/schemas.py`：
+**关键点解释**：
+
+1. **关联表 `bookmark_tags`**：
+   - 不是一个 Model 类，只是一个 Table
+   - 存储书签和标签的对应关系
+   - `ondelete='CASCADE'`：删除书签或标签时自动清理关联
+
+2. **`secondary` 参数**：
+   - 告诉 SQLAlchemy 使用哪个关联表
+   - 自动处理多对多关系
+
+---
+
+## 数据库迁移
+
+### 方案1：删除旧数据库（开发环境）
+
+如果你的数据库还没有重要数据：
+
+```bash
+# 删除旧数据库
+rm bookmark.db
+
+# 重新创建
+python -c "from app.database import Base, engine; Base.metadata.create_all(engine)"
+```
+
+### 方案2：使用 Alembic（生产环境）
+
+如果有重要数据，使用迁移工具：
+
+```bash
+# 安装 Alembic
+pip install alembic
+
+# 初始化
+alembic init alembic
+
+# 配置 alembic.ini
+# 修改 sqlalchemy.url = sqlite:///./bookmark.db
+
+# 配置 alembic/env.py
+# 在文件开头添加：
+from app.models import Base
+target_metadata = Base.metadata
+
+# 生成迁移脚本
+alembic revision --autogenerate -m "add tags table"
+
+# 执行迁移
+alembic upgrade head
+```
+
+---
+
+## 实现标签 API
+
+### 1. 更新 Schema
+
+创建 `app/schemas/tag.py`：
 
 ```python
 from pydantic import BaseModel
@@ -376,56 +220,87 @@ from datetime import datetime
 class TagBase(BaseModel):
     name: str
 
+class TagCreate(TagBase):
+    pass
+
 class TagResponse(TagBase):
     id: int
+    created_at: datetime
     
     class Config:
         from_attributes = True
 
+# 更新书签 Schema
 class BookmarkCreate(BaseModel):
     title: str
     url: str
     description: str | None = None
-    is_public: bool = False
-    tag_names: list[str] = []  # 标签名列表
+    tag_names: list[str] = []  # 新增：标签名列表
 
 class BookmarkResponse(BaseModel):
     id: int
     title: str
     url: str
     description: str | None
-    is_public: bool
     created_at: datetime
-    tags: list[TagResponse]
+    tags: list[TagResponse]  # 新增：关联的标签
     
     class Config:
         from_attributes = True
 ```
 
-更新 `app/crud.py`：
+### 2. 更新 CRUD 操作
+
+在 `app/crud.py` 添加标签相关函数：
 
 ```python
 from sqlalchemy.orm import Session
 from app import models, schemas
 
-def get_or_create_tag(db: Session, tag_name: str):
+# ====== 标签 CRUD ======
+def get_tag_by_name(db: Session, name: str):
+    """通过名称获取标签"""
+    return db.query(models.Tag).filter(models.Tag.name == name).first()
+
+def get_or_create_tag(db: Session, name: str):
     """获取或创建标签"""
-    tag = db.query(models.Tag).filter(models.Tag.name == tag_name).first()
+    tag = get_tag_by_name(db, name)
     if not tag:
-        tag = models.Tag(name=tag_name)
+        tag = models.Tag(name=name)
         db.add(tag)
         db.commit()
         db.refresh(tag)
     return tag
 
-def create_bookmark_with_tags(db: Session, bookmark: schemas.BookmarkCreate, user_id: int):
+def get_all_tags(db: Session):
+    """获取所有标签"""
+    return db.query(models.Tag).all()
+
+def get_tag_with_count(db: Session):
+    """获取标签及其书签数量"""
+    from sqlalchemy import func
+    
+    return db.query(
+        models.Tag.id,
+        models.Tag.name,
+        func.count(models.Bookmark.id).label('bookmark_count')
+    )\
+    .outerjoin(models.Tag.bookmarks)\
+    .group_by(models.Tag.id)\
+    .all()
+
+# ====== 更新书签 CRUD ======
+def create_bookmark_with_tags(
+    db: Session,
+    bookmark: schemas.BookmarkCreate,
+    user_id: int
+):
     """创建书签并关联标签"""
     # 创建书签
     db_bookmark = models.Bookmark(
         title=bookmark.title,
         url=bookmark.url,
         description=bookmark.description,
-        is_public=bookmark.is_public,
         user_id=user_id
     )
     
@@ -439,102 +314,255 @@ def create_bookmark_with_tags(db: Session, bookmark: schemas.BookmarkCreate, use
     db.refresh(db_bookmark)
     return db_bookmark
 
-def search_bookmarks(db: Session, user_id: int, keyword: str):
-    """搜索书签（标题、描述、标签）"""
-    from sqlalchemy import or_
+def update_bookmark_tags(
+    db: Session,
+    bookmark_id: int,
+    tag_names: list[str]
+):
+    """更新书签的标签"""
+    bookmark = db.query(models.Bookmark).filter(models.Bookmark.id == bookmark_id).first()
+    if not bookmark:
+        return None
     
+    # 清空现有标签
+    bookmark.tags.clear()
+    
+    # 添加新标签
+    for tag_name in tag_names:
+        tag = get_or_create_tag(db, tag_name)
+        bookmark.tags.append(tag)
+    
+    db.commit()
+    db.refresh(bookmark)
+    return bookmark
+
+def get_bookmarks_by_tag(
+    db: Session,
+    tag_name: str,
+    user_id: int,
+    skip: int = 0,
+    limit: int = 100
+):
+    """通过标签筛选书签"""
     return db.query(models.Bookmark)\
-        .outerjoin(models.Bookmark.tags)\
+        .join(models.Bookmark.tags)\
         .filter(
-            models.Bookmark.user_id == user_id,
-            or_(
-                models.Bookmark.title.contains(keyword),
-                models.Bookmark.description.contains(keyword),
-                models.Tag.name.contains(keyword)
-            )
+            models.Tag.name == tag_name,
+            models.Bookmark.user_id == user_id
         )\
-        .distinct()\
+        .offset(skip)\
+        .limit(limit)\
         .all()
 ```
 
-## 性能优化技巧
+### 3. 创建标签路由
 
-### 1. 延迟加载 vs 急切加载
+创建 `app/routers/tags.py`：
 
 ```python
-# 延迟加载（默认）- 访问关系时才查询
-user = db.query(User).first()
-print(user.bookmarks)  # 此时才查数据库
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
+from typing import List
+from app.database import get_db
+from app import crud, schemas
+from app.routers.auth import get_current_user
 
-# 急切加载 - 一次性加载所有关系
-from sqlalchemy.orm import joinedload
+router = APIRouter(prefix="/tags", tags=["标签"])
 
-user = db.query(User)\
-    .options(joinedload(User.bookmarks))\
-    .first()
-print(user.bookmarks)  # 不会再查数据库
+@router.get("/", response_model=List[schemas.TagResponse])
+def get_tags(db: Session = Depends(get_db)):
+    """获取所有标签"""
+    return crud.get_all_tags(db)
+
+@router.get("/stats")
+def get_tags_stats(db: Session = Depends(get_db)):
+    """获取标签统计"""
+    results = crud.get_tag_with_count(db)
+    return [
+        {
+            "id": tag_id,
+            "name": name,
+            "bookmark_count": count
+        }
+        for tag_id, name, count in results
+    ]
+
+@router.get("/{tag_name}/bookmarks", response_model=List[schemas.BookmarkResponse])
+def get_bookmarks_by_tag(
+    tag_name: str,
+    skip: int = 0,
+    limit: int = 100,
+    db: Session = Depends(get_db),
+    current_user: schemas.UserResponse = Depends(get_current_user)
+):
+    """通过标签获取书签"""
+    return crud.get_bookmarks_by_tag(db, tag_name, current_user.id, skip, limit)
 ```
 
-### 2. 批量插入
+### 4. 更新书签路由
+
+在 `app/routers/bookmarks.py` 中更新：
 
 ```python
-# ❌ 慢：一条条插入
-for item in items:
-    db.add(Bookmark(**item))
-    db.commit()
+@router.post("/", response_model=schemas.BookmarkResponse, status_code=201)
+def create_bookmark(
+    bookmark: schemas.BookmarkCreate,  # 现在包含 tag_names
+    db: Session = Depends(get_db),
+    current_user: schemas.UserResponse = Depends(get_current_user)
+):
+    """创建书签（支持标签）"""
+    return crud.create_bookmark_with_tags(db, bookmark, current_user.id)
 
-# ✅ 快：批量插入
-bookmarks = [Bookmark(**item) for item in items]
-db.bulk_save_objects(bookmarks)
-db.commit()
-```
-
-### 3. 索引优化
-
-```python
-class Bookmark(Base):
-    __tablename__ = "bookmarks"
+@router.put("/{bookmark_id}/tags")
+def update_tags(
+    bookmark_id: int,
+    tag_names: List[str],
+    db: Session = Depends(get_db),
+    current_user: schemas.UserResponse = Depends(get_current_user)
+):
+    """更新书签的标签"""
+    bookmark = crud.update_bookmark_tags(db, bookmark_id, tag_names)
+    if not bookmark:
+        raise HTTPException(status_code=404, detail="书签不存在")
     
-    id = Column(Integer, primary_key=True)
-    title = Column(String, index=True)  # 添加索引
-    user_id = Column(Integer, ForeignKey("users.id"), index=True)
+    # 验证权限
+    if bookmark.user_id != current_user.id:
+        raise HTTPException(status_code=403, detail="没有权限")
+    
+    return {"message": "标签更新成功", "tags": [tag.name for tag in bookmark.tags]}
 ```
 
-## PostgreSQL vs SQLite
+### 5. 注册路由
 
-| 特性 | SQLite | PostgreSQL |
-|------|--------|------------|
-| **适用场景** | 开发、小型应用 | 生产环境 |
-| **并发** | 单写多读 | 多写多读 |
-| **数据类型** | 简单 | 丰富（JSON、数组） |
-| **全文搜索** | 有限 | 强大 |
-| **配置** | 零配置 | 需要安装 |
+在 `app/main.py` 中添加：
 
-### 切换到 PostgreSQL
-
-1. **安装依赖**：
-```bash
-pip install psycopg2-binary
-```
-
-2. **修改 `database.py`**：
 ```python
-SQLALCHEMY_DATABASE_URL = "postgresql://user:password@localhost/dbname"
+from app.routers import bookmarks, auth, tags  # 新增 tags
+
+app.include_router(auth.router)
+app.include_router(bookmarks.router)
+app.include_router(tags.router)  # 新增
 ```
+
+---
+
+## 测试标签功能
+
+### 1. 创建带标签的书签
+
+```bash
+curl -X POST "http://localhost:8000/bookmarks/" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "FastAPI 官方文档",
+    "url": "https://fastapi.tiangolo.com",
+    "description": "FastAPI 官方教程",
+    "tag_names": ["Python", "FastAPI", "后端"]
+  }'
+```
+
+响应：
+```json
+{
+  "id": 1,
+  "title": "FastAPI 官方文档",
+  "url": "https://fastapi.tiangolo.com",
+  "description": "FastAPI 官方教程",
+  "created_at": "2024-01-01T00:00:00",
+  "tags": [
+    {"id": 1, "name": "Python", "created_at": "..."},
+    {"id": 2, "name": "FastAPI", "created_at": "..."},
+    {"id": 3, "name": "后端", "created_at": "..."}
+  ]
+}
+```
+
+### 2. 获取所有标签
+
+```bash
+curl "http://localhost:8000/tags/"
+```
+
+### 3. 通过标签筛选书签
+
+```bash
+curl "http://localhost:8000/tags/Python/bookmarks" \
+  -H "Authorization: Bearer YOUR_TOKEN"
+```
+
+### 4. 更新书签标签
+
+```bash
+curl -X PUT "http://localhost:8000/bookmarks/1/tags" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '["Python", "教程", "Web开发"]'
+```
+
+---
+
+## 常见问题
+
+### 1. 如何避免标签重复？
+
+在创建标签时，使用 `get_or_create_tag` 函数：
+
+```python
+def get_or_create_tag(db: Session, name: str):
+    tag = db.query(Tag).filter(Tag.name == name).first()
+    if not tag:
+        tag = Tag(name=name)
+        db.add(tag)
+        db.commit()
+    return tag
+```
+
+### 2. 删除书签时标签怎么处理？
+
+使用 `CASCADE` 级联删除：
+
+```python
+bookmark_tags = Table(
+    'bookmark_tags',
+    Base.metadata,
+    Column('bookmark_id', ForeignKey('bookmarks.id', ondelete='CASCADE')),
+    Column('tag_id', ForeignKey('tags.id', ondelete='CASCADE'))
+)
+```
+
+删除书签时，关联表的记录会自动删除，但 `tags` 表的标签会保留。
+
+### 3. 如何实现标签搜索？
+
+```python
+def search_tags(db: Session, keyword: str):
+    return db.query(Tag)\
+        .filter(Tag.name.contains(keyword))\
+        .all()
+```
+
+---
 
 ## 小结
 
-这一章我们深入学习了：
+这一章我们完成了：
 
-- ✅ SQLAlchemy 的核心概念
-- ✅ 数据库关系设计（一对多、多对多）
-- ✅ 复杂查询（连接、过滤、分页）
-- ✅ 数据库迁移（Alembic）
-- ✅ 性能优化技巧
-- ✅ 完整的标签系统实现
+- ✅ 理解多对多关系设计
+- ✅ 创建关联表（`bookmark_tags`）
+- ✅ 实现标签 CRUD 操作
+- ✅ 为书签添加标签功能
+- ✅ 按标签筛选书签
 
-::: tip
-数据库设计是后端开发的核心能力。建议多练习复杂查询，理解 ORM 的查询原理。
-:::
+**你的项目现在有**：
+```
+用户系统（注册/登录）→ 书签管理（CRUD）→ 标签系统（分类）
+```
 
-下一章：[异步编程与性能优化](/blog/backend/python-fullstack/chapter-05/)
+**下一步**：用户量增加后，系统变慢了，怎么优化？
+
+---
+
+上一章：[第一个 API 项目实战](/blog/backend/python-fullstack/chapter-03/)
+
+下一章：[性能优化实战](/blog/backend/python-fullstack/chapter-05/)

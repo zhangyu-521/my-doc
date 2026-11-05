@@ -30,9 +30,20 @@
 
 ### 直接产出
 - ✅ 能独立开发 RESTful API
-- ✅ 能设计数据库结构
-- ✅ 能集成 LLM 和 Agent
+- ✅ 能设计数据库结构与关系
+- ✅ 能实现性能优化方案
+- ✅ 能集成 LLM、RAG 和 Agent
 - ✅ 能部署完整的全栈项目
+
+### 实战项目
+通过这个系列，你将完成一个完整的 **AI 书签管理系统**：
+- 用户认证与授权
+- 书签 CRUD 与标签系统
+- 性能优化（缓存、索引、连接池）
+- AI 摘要生成
+- 智能问答（RAG）
+- AI Agent 自动整理
+- Docker 容器化部署
 
 ### 求职方向
 - AI 应用开发工程师
@@ -42,17 +53,27 @@
 
 ## 系列规划
 
+这是一个完整的 Python 全栈开发教程，从基础到 AI 应用，从开发到部署：
+
 ### 基础篇 (1-3 章)
 - [第1章：Python vs JavaScript 核心差异](/blog/backend/python-fullstack/chapter-01/)
 - [第2章：FastAPI 快速上手](/blog/backend/python-fullstack/chapter-02/)
 - [第3章：第一个 API 项目实战](/blog/backend/python-fullstack/chapter-03/)
 
 ### 进阶篇 (4-5 章)
-- [第4章：SQLAlchemy ORM 与数据库设计](/blog/backend/python-fullstack/chapter-04/)
-- [第5章：异步编程与性能优化](/blog/backend/python-fullstack/chapter-05/)
+- [第4章：书签标签系统（多对多关系实战）](/blog/backend/python-fullstack/chapter-04/)
+- [第5章：性能优化实战（解决真实性能问题）](/blog/backend/python-fullstack/chapter-05/)
+
+### AI 集成篇 (6-8 章)
+- [第6章：AI 摘要生成器](/blog/backend/python-fullstack/chapter-06/)
+- [第7章：智能书签问答（RAG）](/blog/backend/python-fullstack/chapter-07/)
+- [第8章：AI 助手 Agent](/blog/backend/python-fullstack/chapter-08/)
+
+### 部署篇 (第9章)
+- [第9章：部署与生产化](/blog/backend/python-fullstack/chapter-09/)
 
 ::: tip
-后续会继续更新 AI 集成篇、项目实战篇。订阅本站或关注更新。
+全系列已完结！从基础到 AI 应用，从开发到部署，完整的 Python 全栈开发路径。
 :::
 
 ## 学习建议
@@ -89,12 +110,12 @@
 
 ## 预期时间
 
-- **基础篇 (1-3 章)** - 2 周
-- **进阶篇 (4-5 章)** - 2 周
-- **AI 集成篇** - 3 周
-- **项目实战** - 4-6 周
+- **基础篇 (1-3 章)** - 1-2 周
+- **进阶篇 (4-5 章)** - 1-2 周
+- **AI 集成篇 (6-8 章)** - 2-3 周
+- **部署篇 (第9章)** - 1 周
 
-总计约 **3 个月**，你就能有完整的 Python 全栈能力和可展示的 AI 项目作品。
+总计约 **2 个月**，你就能有完整的 Python 全栈能力和可展示的 AI 项目作品。
 
 ---
 

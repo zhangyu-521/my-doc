@@ -167,8 +167,12 @@ export default defineConfig({
             { text: '第1章：Python vs JavaScript 核心差异', link: '/blog/backend/python-fullstack/chapter-01/' },
             { text: '第2章：FastAPI 快速上手', link: '/blog/backend/python-fullstack/chapter-02/' },
             { text: '第3章：第一个 API 项目实战', link: '/blog/backend/python-fullstack/chapter-03/' },
-            { text: '第4章：SQLAlchemy ORM 与数据库设计', link: '/blog/backend/python-fullstack/chapter-04/' },
-            { text: '第5章：异步编程与性能优化', link: '/blog/backend/python-fullstack/chapter-05/' },
+            { text: '第4章：书签标签系统（多对多关系实战）', link: '/blog/backend/python-fullstack/chapter-04/' },
+            { text: '第5章：性能优化实战（解决真实性能问题）', link: '/blog/backend/python-fullstack/chapter-05/' },
+            { text: '第6章：AI 摘要生成器', link: '/blog/backend/python-fullstack/chapter-06/' },
+            { text: '第7章：智能书签问答（RAG）', link: '/blog/backend/python-fullstack/chapter-07/' },
+            { text: '第8章：AI 助手 Agent', link: '/blog/backend/python-fullstack/chapter-08/' },
+            { text: '第9章：部署与生产化', link: '/blog/backend/python-fullstack/chapter-09/' },
           ]
         }
       ],
